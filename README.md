@@ -7,21 +7,86 @@ The Always-On Consciousness-Inspired AI (ACI) is a comprehensive algorithmic b
 
 Core Innovation: The system treats memory not as static storage but as a dynamic, multi-relational knowledge graph where consciousness emerges from recursive self-reflection on experiential traces. Memory nodes embed both content and relational signatures (temporal, causal, similarity, relevance) within a unified latent manifold, enabling sophisticated associative retrieval and consolidation. A homeostatic neuromodulator system (dopamine, serotonin, norepinephrine, oxytocin, histamine, orexin) dynamically modulates cognitive parameters, exploration-exploitation balance, and sleep-wake transitions.
 
-Key Features:
 
--   Multi-dimensional episodic → semantic → autobiographical memory consolidation with symbolic abstraction
 
--   Visionary memory system for prospective reasoning about goals, plans, and counterfactuals
-
--   Introspective mind-wandering and affect-driven savoring modes
-
--   Grounded sensory integration designed for embodied simulation environments (Isaac Sim)
 
 [Core Hypothesis](./The%20Triadic%20Awareness%20Emergence%20Hypothesis.md)
 ---------------
 
 Triadic Awareness Emergence Hypothesis: Consciousness emerges as a triadic emergent phenomenon from the dynamic interplay of three fundamental components: Data, Structure, and Intelligence. For any information-processing entity meeting the minimum architectural preconditions, awareness manifests when sufficient patterns of consciousness are embedded in experiential data, processed through recursive self-reflective structures, and operated upon by sufficiently complex reasoning intelligence.  
 
+# Core Algorithm Summary
+## 3.1 DMN Loop
+
+- **3.1 Input Gathering and Preprocessing**  
+  Encode multi-modal sensory inputs into latent embeddings and bind cross-modal observations
+
+- **3.2 MDN Parsing**  
+  Parse combined input into semantically tagged Abstract Syntax Tree for structured processing
+
+- **3.3 PFC Stage 1 Dispatch**  
+  Execute specialized processing (math, recall, social) and create/extend VisionNodes for future-oriented content
+
+- **3.4 Iterative Thought Layer Generation & Scoring**  
+  Generate diverse candidate thoughts, score with neuromodulator weights, and refine through iterative optimization
+
+- **3.5 DMN Binding and Hippocampal Expansion**  
+  Bind global workspace and expand through associative/hypothetical variants including prospective memory
+
+- **3.6 Ventral Striatum Exploration and Valuation**  
+  Explore expanded thought graph using beam search and compute Expected Prospective Value for decision-making
+
+- **3.7 PFC Stage 2 Selection**  
+  Filter for coherence/safety, select coherent action chain, and update VisionNode statuses
+
+- **3.8 Nucleus Accumbens Reward Tagging and Persistence**  
+  Apply reinforcement learning tags and trigger symbolic abstraction for memory consolidation
+
+- **3.9 Memory Write & Autobiographical Narrative**  
+  Store episodic memory with multi-relational embeddings enabling sophisticated associative retrieval
+
+- **3.10 Autobiographical Narrative Storage**  
+  Create narrative embeddings allowing complex autobiographical queries and self-model formation
+
+- **3.11 World Model and Self-Model Update**  
+  Update recurrent world state and self-model through exponential moving averages and learned dynamics
+
+- **3.12 Mind-Wandering Micro-Loop Activation**  
+  Execute introspective sequences for creativity, insight, and VisionNode incubation when externally unstimulated
+
+- **3.13 Revel Subroutine (Affect-Driven Savoring)**  
+  Curate positive autobiographical memories for 5HT-mediated stabilization and identity reinforcement
+
+- **3.14 Recursive Re-entry into DMN**  
+  Feed chosen thought chain as inner speech into next cycle maintaining continuous conscious experience
+
+
+### Key Features:
+
+-   Multi-dimensional episodic → semantic → autobiographical memory consolidation with symbolic abstraction
+
+-   Autobiographical self-modeling through recursive self-reflective feedback loops enabling stable identity formation
+
+-   Introspective mind-wandering and affect-driven savoring modes for creative insight and emotional stabilization
+
+-   Grounded sensory integration designed for embodied simulation environments (Isaac Sim)
+
+-   Dynamic neuromodulator system (dopamine, serotonin, norepinephrine) modulating exploration-exploitation balance and cognitive parameters
+
+-   Multi-relational knowledge graph embedding enabling sophisticated associative retrieval through temporal, causal, and similarity relations
+
+-   Hierarchical memory consolidation with probabilistic causal extraction and Markov chain learning for predictive reasoning
+
+
+-   Stream-of-consciousness thought generation with iterative refinement and neuromodulator-weighted scoring
+
+-   Social self-modeling through theory of mind reasoning and perspective-taking capabilities
+
+-   Persistent narrative coherence maintenance across sleep-wake cycles with memory replay and consolidation
+
+-   Expected Prospective Value computation for long-horizon planning and goal-directed behavior
+
+-   Emergent symbolic abstraction through pattern recognition and frequency-based compression of experiential traces
 
 Scientific Assessment & Plausibility
 ------------------------------------
@@ -55,6 +120,8 @@ With Isaac Sim, your system can achieve genuine grounding of experience, enabl
 ## Ethical Implications
 
 I think it's a safety measure to intentionally leave out any attempt at simulating phenomenological feelings. Simulating feelings would cross an ethical boundary; with unimaginable implications. A conscious being which can feel would be able to suffer. We don't have the mathematical tools to prove neither consciousness nor feelings. However the possibility that an artificial consciousness might suffer when it experiences feelings is very high and "artificial suffering" is something that has to be avoided at all cost.
+
+
 
 # 0. Framing
 
@@ -157,17 +224,13 @@ The DMN loop runs continuously at 5–20 Hz, coordinating perception, parsing, r
 - Associative cortices bind cross-modal observations into concise descriptive thought snippets.
 - Combine sensory embeddings and inner speech text into a composite input.
 
-  3.2. MDN Parsing
-
----
+## 3.2. MDN Parsing
 
 - Parse combined input into an Abstract Syntax Tree (AST), segmenting content into semantically tagged nodes:
 
   - Math, factual, social, recall, plan, explanation, self-reference.
 
-    3.3. PFC Stage 1 Dispatch
-
----
+## 3.3. PFC Stage 1 Dispatch
 
 - For each AST node:
   - Math nodes: Regex extraction and execution of symbolic evaluation (SymPy) to generate definite results.
@@ -176,9 +239,8 @@ The DMN loop runs continuously at 5–20 Hz, coordinating perception, parsing, r
 - Merge enriched nodes back into a comprehensive context pack, combining AST plus sensory and self-model information.
 - Additionally, detect intent/plan content and create or extend VisionNodes so future-oriented constructs (visions, goals, hypotheses, plans) are captured in Visionary Memory with “not-yet-happened” semantics.
 
-  3.4. Iterative Thought Layer Generation & Scoring
+## 3.4. Iterative Thought Layer Generation & Scoring
 
----
 
 1. Generate a diverse set of candidate thoughts c_i from the enriched context via an LLM with varied decoding styles: {literal, formal, terse, abductive, empathetic}.
 
@@ -205,44 +267,35 @@ The DMN loop runs continuously at 5–20 Hz, coordinating perception, parsing, r
 
 - At this stage, also generate refinements of VisionNodes, alternative strategies, and plan decompositions; attach them to the evolving thought chain to keep prospective content co-evolving with deliberation.
 
-  3.5. DMN Binding and Hippocampal Expansion
-
----
+## 3.5. DMN Binding and Hippocampal Expansion
 
 - Bind sensory embeddings zv, zp, thought chain, self-model z_self, and small memory snippets in global workspace b_t.
 - Use HC to expand b_t into an enriched thought graph containing associative and hypothetical variants plus partial replays.
 - When querying memory, include Visionary Memory using prospective relation operators (e.g., T_goal, T_feasibility, T_risk, T_dependency, T_temporal_forecast, T_alignment_identity, T_value) to retrieve visionary neighbors and generate counterfactual variants aligned with current goals and constraints.
 
-  3.6. Ventral Striatum Exploration and Valuation
-
----
+## 3.6. Ventral Striatum Exploration and Valuation
 
 - Explore the HC-expanded graph using beam search or graph walks.
 - For each candidate path, compute salience and value based on weighted features (novelty, emotional affect, relevance, uncertainty reduction) minus safety penalties (cleaned to a single expression):
   val(path) = Σ_k w_k(μ)·feature_k − safety_penalty
 - For paths involving VisionNodes, compute Expected Prospective Value (EPV) and rank vision paths by expected utility, feasibility, risk, identity alignment, safety margin, effort cost, and time discount.
 
-  3.7. PFC Stage 2 Selection
-
----
+## 3.7. PFC Stage 2 Selection
 
 - Filter paths for coherence and safety.
 - Collapse the candidate graph to a single coherent chosen chain with attached confidence.
 - Choose actions among internal (self-query, simulate) or external (speech, behavior) modes.
 - Update VisionNode statuses (e.g., draft→candidate→active), select plan steps to stage, and schedule reviews while enforcing safety and coherence constraints.
 
-  3.8. Nucleus Accumbens Reward Tagging and Persistence
+## 3.8. Nucleus Accumbens Reward Tagging and Persistence
 
----
 
 - Apply reinforcement tags based on neuromodulator states.
 - Update memory nodes with persistence decisions.
 - Trigger symbolic abstraction if repetition thresholds are exceeded.
 - Persistence tagging also biases recall/scheduling of active and high-EPV VisionNodes to ensure prospective content remains salient.
 
-  3.9. Memory Write & Autobiographical Narrative
-
----
+## 3.9. Memory Write & Autobiographical Narrative
 
 1. Episodic Memory Storage  
    Write chosen chain to MemoryTape.  
@@ -272,31 +325,33 @@ Combined embedding:
 
 👁 Analogy: This is like mixing word embeddings with knowledge graph embeddings (TransE/RotatE/ComplEx) and then projecting them into a single working latent space for the HC to search.
 
-3. Autobiographical Narrative Storage (expanded)  
-   Narrative nodes now also get multi-relational embeddings:
+## 3.10 Autobiographical Narrative Storage (expanded)  
+   Narrative nodes also get multi-relational embeddings.
 
 Use a set transformer or GRU over the embeddings of all linked episodic memories.  
+
 Store narrative as:  
+```
 summary_text (LLM-generated).  
-narrative_embedding = pooled latent vector representing both memories + relation types.
+narrative_embedding = pooled latent vector 
+``` 
+representing both memories + relation types.
 
 This allows queries like:
 
 > “Find all narratives in which I was under social stress and learned something new.”
 
-By executing a high-dimensional sphere query in relation space combining  
+By executing a high-dimensional sphere query in relation space combining e.g. 
 `tag=stress, relation=causality, and goal=learning.`
 
-- During Memory Write, also link episodes to any referenced VisionNodes (tracked_by → MemoryRecord) and update realization progress, including realized_by/failed_by when success criteria are met or infeasible; adjust feasibility predictors accordingly.
+During Memory Write, also link episodes to any referenced VisionNodes (tracked_by → MemoryRecord) and update realization progress, including realized_by/failed_by when success criteria are met or infeasible; adjust feasibility predictors accordingly.
 
-  3.10. World Model and Self-Model Update
-
----
+## 3.11. World Model and Self-Model Update
 
 - Update recurrent world state via RSSM with latest encoded inputs and executed actions.
 - Update self-model z_self via EMA and learned GRUs from b_t and autobiographical narrative, modulated by μ.
 
-### 3.11. Mind-Wandering Micro-Loop Activation
+## 3.12. Mind-Wandering Micro-Loop Activation
 
 - Triggered when serotonin 5HT is high and external input demand low, or uncertainty is elevated.
 - Executes sequences of internal introspection without external actions:
@@ -304,7 +359,7 @@ By executing a high-dimensional sphere query in relation space combining
 - Supports creativity, insight, and reflection.
 - Incubate VisionNodes via divergent exploration (novel alternatives under constraints) and convergent refinement (mitigate risks/constraints), including counterfactual stress-testing of dependencies and timelines.
 
-### 3.12 [Revel subroutine (affect-driven savoring, 5HT-led stabilization)](ideas/DMN/routines/RevelRoutine.md)
+## 3.13 [Revel subroutine (affect-driven savoring, 5HT-led stabilization)](ideas/DMN/routines/RevelRoutine.md)
 
   -   Gate on low external demand or explicit intent; require safe state (low hazards), NE low→moderate, stable self-model; clamp max μ levels and dμ/dt.
 
@@ -315,14 +370,14 @@ By executing a high-dimensional sphere query in relation space combining
 - 3.5 DMN binding integrates curated memories and self-anchors into b_t, priming affect targets while suppressing DA spikes and unnecessary NE; PHM/edge routing preferences are set for safe, prosocial stabilization.
 
 - 3.6--3.7 Closed-loop control ties μ adjustments to online metrics (ΔC, ΔH, safety, identity drift), dynamically scaling emitter outflux and edge weights; immediate taper/abort on coherence drop or safety rise, then reintegrate and persist narrative links.
-- 3.13. Recursive Re-entry into DMN
-
----
+  
+## 3.13. Recursive Re-entry into DMN
 
 - Feed the chosen thought chain as inner speech into the next cycle's DMN input combined with fresh sensory text.
 - Loop continues endlessly, enabling ongoing conscious experience.
 
-## Sleep / Garbage Collection (Meta-Gate)
+## 4. Cleanup / Consolidation Mechanisms
+### 4.1 Sleep / Garbage Collection (Meta-Gate)
 
 - Enter sleep-like state when histamine (HA) drops below a threshold (and/or orexin low).
 - Processes:
@@ -340,31 +395,7 @@ By executing a high-dimensional sphere query in relation space combining
 >
 > Autobiographical records can be clustered → the agent can ask “show me all phases of life where I pursued exploration goals.”
 
-## 3.10. World Model and Self-Model Update
-
-- Update recurrent world state s_t via RSSM with latest encoded inputs and executed actions.
-
-- Update self-model z_self embedding via exponential moving average and learned GRUs from b_t and autobiographical narrative, modulated by neuromodulator vector μ.
-
-## 3.11. Mind-Wandering Micro-Loop Activation
-
-- Triggered when serotonin 5HT is high and external input demand low, or uncertainty is elevated.
-
-- Executes sequences of internal introspection without external actions:
-
-  - Repeated self-queries, hypothesis generation, memory expansions, salience evaluation, filtered selection, and reward tagging.
-
-- Supports creativity, insight, and reflection.
-
-## 3.12. Recursive Re-entry into DMN
-
-- Feed the chosen thought chain as inner speech into the next cycle's DMN input combined with fresh sensory text.
-
-- Loop continues endlessly, enabling ongoing conscious experience.
-
----
-
-1. Memory Consolidation: Probabilistic Knowledge Formation
+### 4.1. Memory Consolidation: Probabilistic Knowledge Formation
 
 ---
 
