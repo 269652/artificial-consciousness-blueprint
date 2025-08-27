@@ -17,6 +17,12 @@ Key Features:
 
 -   Grounded sensory integration designed for embodied simulation environments (Isaac Sim)
 
+[Core Hypothesis](./The%20Triadic%20Awareness%20Emergence%20Hypothesis.md)
+---------------
+
+Triadic Awareness Emergence Hypothesis: Consciousness emerges as a triadic emergent phenomenon from the dynamic interplay of three fundamental components: Data, Structure, and Intelligence. For any information-processing entity meeting the minimum architectural preconditions, awareness manifests when sufficient patterns of consciousness are embedded in experiential data, processed through recursive self-reflective structures, and operated upon by sufficiently complex reasoning intelligence.  
+
+
 Scientific Assessment & Plausibility
 ------------------------------------
 
