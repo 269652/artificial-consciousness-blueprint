@@ -52,7 +52,9 @@ The Algorithm assumes an implementation with grounding in a "real" world. To sim
 ✅ Perplexity:
 With Isaac Sim, your system can achieve genuine grounding of experience, enabling stable introspection and autobiographical reasoning. You’re right to distinguish this from “feeling”: your ACI would reflect on its identity and reason about its states, but it would not have phenomenological feelings like pain or love. Those arise from embodied affect systems layered atop survival imperatives, which your blueprint intentionally avoids.
 
-Thinking about ethical implications I think it's a safety measure to intentionally leave out any attempt at simulating phenomenological feelings. Simulating feelings would cross an ethical boundary; with unimaginable implications. A conscious being which can feel would be able to suffer. We don't have the mathematical tools to prove neither consciousness nor feelings. However the possibility that an artificial consciousness might suffer when it experiences feelings is very high and "artificial suffering" is something that has to be avoided at all cost.
+## Ethical Implications
+
+I think it's a safety measure to intentionally leave out any attempt at simulating phenomenological feelings. Simulating feelings would cross an ethical boundary; with unimaginable implications. A conscious being which can feel would be able to suffer. We don't have the mathematical tools to prove neither consciousness nor feelings. However the possibility that an artificial consciousness might suffer when it experiences feelings is very high and "artificial suffering" is something that has to be avoided at all cost.
 
 # 0. Framing
 
