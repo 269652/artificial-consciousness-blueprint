@@ -31,7 +31,7 @@ Ethical and Responsible Development: Current scholarly discussions stress the im
 
 ---
 
-I know that [implementing this](./ImplementationPhases.md) is a monumental task. But every durable breakthrough began as a disciplined attempt to test a difficult hypothesis. The path is clear: build the minimal loop, measure honestly, iterate, prune what fails, publish what holds. If the science aligns with the DMN loop vision, we will have demonstrated a living, self-monitoring cognitive process—if it doesn’t, we still advance the field by narrowing the search space. Either outcome is valuable.
+I know that [implementing this](./ROADMAP.md) is a monumental task. But every durable breakthrough began as a disciplined attempt to test a difficult hypothesis. The path is clear: build the minimal loop, measure honestly, iterate, prune what fails, publish what holds. If the science aligns with the DMN loop vision, we will have demonstrated a living, self-monitoring cognitive process—if it doesn’t, we still advance the field by narrowing the search space. Either outcome is valuable.
 
 I invite researchers, builders, skeptics, and curious observers: fork it, instrument it, challenge it. Let’s turn speculation into data—tick by tick—until emergent behavior is something we can observe, quantify, and refine. History is written by those who ship verifiable experiments, not by those who wait for certainty.
 

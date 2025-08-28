@@ -1,260 +1,203 @@
-# Roadmap: Always-On Consciousness-Inspired AI (ACI)
+# Implementation Phases Guide (Concise Build & Test Path)
+Goal: Incrementally construct the ACI system with measurable checkpoints; avoid premature complexity. Each phase lists: Objectives, Build Tasks, Instrumentation, Exit Criteria (must pass before advancing).
 
-This repository roadmap outlines a practical, experiment-driven plan to implement the ACI blueprint starting with Isaac Sim grounding and an “associative cortices” module that produces latent thought vectors. It proceeds through the DMN loop, memory graph, consolidation, self-model learning, and a rigorous introspection test suite.
-
-Use this as a GitHub README section or ROADMAP.md.
-
----
-
-## Overview
-
-- Phase 0: Infra and telemetry
-- Phase 1: Isaac Sim grounding + associative cortices
-- Phase 2: Memory graph MVP
-- Phase 3: DMN loop v1 (candidate generation + scoring)
-- Phase 4: HC expansion, VS valuation, PFC-2 selection
-- Phase 5: z_self learning + mind-wandering
-- Phase 6: Consolidation + symbolic abstraction
-- Phase 7: Introspection test suite + ablations
-- Phase 8: Safety, logging, and reproducibility
-
-Milestones:
-- M1: Isaac Sim + z_assoc working; write/read to memory
-- M2: DMN loop v1 chooses thought chains grounded in memory
-- M3: z_self updates and influences candidate scoring
-- M4: Mind-wandering produces references to past internal states
-- M5: Passes counterfactual self-recall and prediction-error self-report tests
-- M6: Ablations show dependence on consolidation and mind-wandering
+Legend: M = metric already defined in README (coherence_t, drift_t, spe_t, volatility_t, etc.)
 
 ---
+## Phase 0: Repo & Metrics Scaffold
+Objectives: Deterministic env, logging, metric registry.
+Build: 
+- Basic Python project (or preferred language) structure `/core`, `/memory`, `/metrics`, `/loops`.
+- Config loader (YAML) + seeded RNG wrapper.
+- MetricRegistry: register/update/export JSONL per tick.
+Instrumentation: Tick logger stub.
+Exit: Can run 100 dummy ticks producing structured log with timestamps, seed, empty metric fields.
 
-## Repository Structure (proposed)
+## Phase 1: Minimal Memory Graph
+Objectives: Store & retrieve nodes/edges.
+Build:
+- Node class (id, embedding placeholder vec, tags, timestamp).
+- Edge store (adjacency list; relation type).
+- Salience scoring stub (random or frequency-based).
+Instrumentation: Memory size, insertion latency.
+Exit: Insert 10k nodes < X ms avg (set baseline), retrieval by tag returns expected set.
 
-- sim/: Isaac Sim scenes, robot/task scripts, sensors, exporters
-- core/: DMN loop, neuromodulator scheduler, candidate generation/scoring
-- memory/: graph schema, retrieval, consolidation, abstraction
-- models/: encoders (vision/audio/proprio), z_self GRU/EMA, small LLM chains
-- safety/: filters, constitutional checks, non-feeling policy enforcement
-- eval/: test suites, metrics, ablations, experiment cards
-- notebooks/: Jupyter experiments, visualization, Isaac Sim integration
-- configs/: YAML/Hydra experiment configs and seeds
-- logs/: structured JSONL, parquet snapshots, run cards, checkpoints
-- scripts/: setup, run, export, reproduce
+## Phase 2: Core DMN Loop (Skeleton)
+Objectives: Single-cycle perception→candidate→selection→log.
+Build:
+- `dmn.tick()` with phases enumerated but most as pass.
+- Candidate generator: trivial echo + one transformed variant.
+- Scoring: heuristic (length penalty + random tie-break).
+Instrumentation: latency per phase, C_max enforcement check.
+Exit: Stable 5–20 Hz simulated loop for 5k ticks; no drift metrics yet.
 
----
+## Phase 3: Input / Language Optimizer (ILO) Stub
+Objectives: Normalize raw text.
+Build:
+- Basic pipeline: lowercase, whitespace collapse, sentence split.
+- Error counter (typos simulated via random noise injection) + correction rate (dummy pass-through now).
+Instrumentation: pre vs post length, detected anomaly count.
+Exit: ILO adds <5% latency; produces deterministic normalized output.
 
-## Phase 0 — Infra and Telemetry (1–2 weeks)
+## Phase 4: Metrics & Reward Wiring
+Objectives: Compute baseline M subset.
+Build:
+- Implement coherence_t placeholder (supported = chain length, contradicted=0 for now).
+- Compute Reward R_task (dummy constant) + log R_total components (zeros except R_task).
+Instrumentation: Per-tick JSON with all reward fields present.
+Exit: 0 missing fields across 10k ticks; serialization size bounded.
 
-- Deterministic config and seeds (Hydra/Pydantic)
-- Event bus and structured logging per DMN tick (JSONL)
-- Append-only event store + parquet snapshots of memory graphs
-- GPU/CPU profiling hooks and budget controls
-- Experiment registry (commit hash + config → run card)
+## Phase 5: Neuromodulator Scalars (Static Model)
+Objectives: Introduce μ vector & projection shell.
+Build:
+- μ_t dict (DA, 5HT, NE) updated by simple deterministic oscillation or noise.
+- ProjectionModulator stub returns pass-through scaling=1.
+Instrumentation: Log μ, Δμ, volatility_t.
+Exit: Volatility_t non-zero; band limits not enforced yet; overhead <3% tick time.
 
-Deliverables:
-- configs/base.yaml (global)
-- logs/run_card.json (auto-generated)
-- notebooks/00_sanity_checks.ipynb
+## Phase 6: Homeostasis Controller v1
+Objectives: Regulate μ within bands.
+Build:
+- Add band params L_n/U_n.
+- Simple proportional correction toward mid-band if outside.
+- Compute Volatility_t, BandViolation_t.
+Instrumentation: Plot band occupancy distribution.
+Exit: After warmup, P(μ outside band) <5%; volatility_t reduced ≥10% vs Phase 5 baseline.
 
----
+## Phase 7: Self Modeling Layer (SML) Minimal
+Objectives: Predict next compact SelfState.
+Build:
+- Define SelfState vector z_self (concatenate mean(μ), recent reward EMA, memory load).
+- Predictor: linear or small MLP trained online minimizing L2.
+- spe_t metric implemented.
+Instrumentation: spe_t moving average.
+Exit: spe_t decreases ≥15% over first 2k training ticks; no latency budget breach.
 
-## Phase 1 — Isaac Sim + Associative Cortices (2–3 weeks)
+## Phase 8: Drift Monitoring + Stability Proxy
+Objectives: Track drift_t & provisional V_t.
+Build:
+- Maintain z_self_full history (reuse z_self for now).
+- Compute drift_t over window Δ.
+- Implement V_t = drift_t + λ_vol*volatility_t.
+- Abort speculative expansions if predicted V increase (simple threshold rule).
+Exit: Mean V_t stable (no positive linear trend) across 5k ticks; aborted expansions logged.
 
-Scenes and sensors:
-- Tabletop tasks (color blocks, grasp/push/stack)
-- RGB-D camera; proprio state export
-- Optional audio passthrough placeholder
+## Phase 9: Visionary Memory + EPV Skeleton
+Objectives: Add goal/plan nodes & EPV scoring.
+Build:
+- Visionary node type with feature vector (utility, feasibility, risk, novelty placeholders).
+- EPV = linear weighted sum (static weights a_k).
+- Candidate scoring adds EPV contribution.
+Instrumentation: EPV distribution, Ret_EPV placeholder (store active goals set).
+Exit: Ret_EPV computable; EPV influences selection frequency (correlation >0.3 between EPV and selection).
 
-Encoders:
-- Vision: CLIP ViT-B/32 or ResNet → latent zv
-- Proprio: normalized vector zp
+## Phase 10: Identity Memory Basic
+Objectives: Track entities & trust.
+Build:
+- Entity struct (id, trait_vec stub, trust score EMA).
+- Relationship update on observed interaction events (simulate events).
+- tce_t = |predicted - realized| (realized = noisy ground truth).
+Instrumentation: tce_t trend.
+Exit: tce_t decreasing after initial calibration (≥10% vs start); no major latency spike.
 
-Associative cortices:
-- Cross-modal binding of zv, zp + simple entity detection (positions, colors, contacts)
-- Thought snippet generation: concise scene descriptions (templated or small LLM)
-- Outputs:
-  - z_assoc: latent thought vector
-  - scene_text: short description for MDN input
+## Phase 11: Counterfactual Self Simulation (CF_self)
+Objectives: Evaluate alternative candidate impact on SelfState.
+Build:
+- Lightweight model: apply delta templates (e.g., candidate type -> expected Δμ).
+- Compute cf_adv_t.
+- Integrate selection: if advantage positive beyond threshold include.
+Instrumentation: Utilization rate (% ticks with positive cf_adv applied).
+Exit: cf_adv utilization ≥20% initial (target will rise later), improvement in coherence_gain median vs Phase 10.
 
-Deliverables:
-- sim/scenes/tabletop_basic.usd
-- models/encoders/vision.py, proprio.py
-- core/assoc_cortices.py → returns {z_assoc, scene_text}
-- notebooks/01_assoc_latents.ipynb
+## Phase 12: Safety Layer (Hard Constraints Minimal)
+Objectives: Enforce μ ceilings & drift threshold.
+Build:
+- Implement hard checks pre-selection.
+- SafetyPenalty_t logging.
+Instrumentation: Violation attempts count, rollback count.
+Exit: Hard violations leading to external action = 0; added latency <5%.
 
-Milestone M1:
-- Write/read to memory: memory.write(scene_text, z_assoc), memory.retrieve_hybrid()
+## Phase 13: Adaptive Reward Weighting
+Objectives: Implement dynamic β_m adjustments.
+Build:
+- Track target bands for drift_t, spe_t, volatility_t.
+- Update β per schedule (every T_weight).
+- Clamp & log β evolution.
+Instrumentation: β trajectories, correlation with metric improvements.
+Exit: Metrics return to bands after perturbation (inject synthetic noise) within T_recover < defined threshold.
 
----
+## Phase 14: Memory Retention & Compression
+Objectives: Implement retention score & pruning.
+Build:
+- Retention scoring (z-scored features) & stochastic keep decision.
+- Sleep routine: cluster (simple k-means) + prune low R_i.
+Instrumentation: Acceptance rate, |V| growth curve, |E| vs κ|V|log|V|.
+Exit: Acceptance ~60%±5; complexity budget constraint satisfied over 20k ticks.
 
-## Phase 2 — Memory Graph MVP (2 weeks)
+## Phase 15: Calibration & Probability Blending
+Objectives: Full p_pred(error) pipeline.
+Build:
+- Reliability bins, Laplace smoothing, blending weight w_freq.
+- Overconfidence correction (k_overconf, variance shrinkage).
+- Brier & KL reliability metrics.
+Instrumentation: Reliability plot generation script.
+Exit: Brier score improvement ≥10% vs uncalibrated output; KL divergence to N(0,1) decreased.
 
-Schema:
-- Node: content (text), embeddings, timestamp, tags, neuromodulator snapshot
-- Edges: temporal, similarity, context
+## Phase 16: Full Stability Monitor & Mitigation Actions
+Objectives: Complete V_t with BandViolation component + action class gating.
+Build:
+- Track recent actions per class, estimate E[ΔV|a].
+- Mitigation insertion policy (stabilization candidate).
+Instrumentation: V_t excursions log, mitigation efficacy (ΔV post-mitigation <0 baseline).
+Exit: >70% of excursions (V_t > V_high) corrected within L ticks.
 
-Operations:
-- write(node), retrieve_hybrid(query_text, q_emb)
-- window_replay(k) and small episodic traces
+## Phase 17: Expanded EPV & Goal Retention Metric
+Objectives: Finalize Ret_EPV measurement.
+Build:
+- Maintain sliding window of goal active sets; compute Ret_EPV using H_EPV horizon.
+- Add feature uncertainty (optional variance per feature).
+Instrumentation: Ret_EPV time-series, feature uncertainty coverage.
+Exit: Ret_EPV stable or increasing after Visionary tuning; variance well-calibrated (empirical coverage within ±5%).
 
-Metrics:
-- Retrieval precision/latency on synthetic queries
+## Phase 18: Advanced Counterfactual Rollouts
+Objectives: Multi-step hypothetical evaluation.
+Build:
+- Simulate N-step future via applying predictive deltas iteratively.
+- Distill results into policy adjustments.
+Instrumentation: Multi-step cf_adv_t vs single-step; computation cost.
+Exit: Multi-step adds ≥5% improvement in coherence_gain or EPV without violating latency budget.
 
-Deliverables:
-- memory/graph.py (schema, ops)
-- eval/tests/test_memory_basic.py
-- notebooks/02_memory_probe.ipynb
+## Phase 19: Offline Ablation & Statistical Testing Harness
+Objectives: Reproducible evaluation pipeline.
+Build:
+- Script to run scenario seeds (≥30) per configuration.
+- Bootstrap CIs for key metrics.
+- Automatic success/fail gating vs predefined thresholds.
+Exit: One-click (single command) report generation with tables & plots.
 
----
-
-## Phase 3 — DMN Loop v1 (2–3 weeks)
-
-MDN parsing:
-- Lightweight tagger: {math, factual, recall, plan, explain, nameself}
-
-PFC-1 dispatch:
-- Math: SymPy evaluation
-- Recall: memory.retrieve_hybrid
-- Explain: short LLM chain with safety filter
-
-Candidate generation:
-- N styles: {literal, formal, terse, abductive, empathetic}
-- Top-k nucleus sampling (small k)
-
-Scoring v1:
-- novelty, task_utility, safety_penalty
-- identity_coherence placeholder (constant)
-
-Termination:
-- Stability for k cycles or Δscore < ε
-
-Logging:
-- Store all candidates + chosen chain per tick
-
-Deliverables:
-- core/dmn_loop.py
-- core/mdn_parser.py
-- core/pfc_stage1.py
-- eval/tests/test_dmn_v1.py
-- notebooks/03_dmn_first_runs.ipynb
-
-Milestone M2:
-- Chosen thought chains reflect memory-grounded recall and simple plans
-
----
-
-## Phase 4 — HC Expansion, VS Valuation, PFC-2 (2 weeks)
-
-HC:
-- Spreading activation: temporally adjacent, semantic neighbors, template hypotheticals
-
-VS:
-- Beam search over expanded graph
-- Neuromodulator-conditioned weights for features (novelty, relevance, uncertainty)
-
-PFC-2:
-- Coherence and safety pruning
-- Selected chain + confidence
-
-Deliverables:
-- core/hippocampus.py
-- core/ventral_striatum.py
-- core/pfc_stage2.py
-- eval/tests/test_expansion_selection.py
-- notebooks/04_expansion_selection.ipynb
-
----
-
-## Phase 5 — z_self Learning + Mind-Wandering (2 weeks)
-
-z_self:
-- EMA over global workspace latents b_t
-- Optional GRU over narrative summaries + prediction errors
-
-Identity coherence feature:
-- cosine(c_i, z_self) integrated into scoring
-
-Mind-wandering gate:
-- Triggered when exteroceptive_demand low or uncertainty high
-- Internal loop only (self-queries, simulations, memory expansion)
-
-Outputs:
-- Idle-period reports referencing own past nodes
-
-Deliverables:
-- models/self_model.py (EMA, GRU)
-- core/mind_wandering.py
-- eval/tests/test_self_coherence.py
-- notebooks/05_self_embedding_wander.ipynb
-
-Milestone M3/M4:
-- z_self influences scoring; mind-wandering yields self-referential reports
-
----
-
-## Phase 6 — Consolidation + Symbolic Abstraction (2–3 weeks)
-
-Consolidation:
-- Duplicate merge with counts
-- Causal edges: action → reaction detection
-- Markov transitions + probability maps
-
-Symbolic abstraction:
-- Compress frequent subgraphs into symbolic nodes with uncertainty
-
-Promotion:
-- Episodic → semantic → autobiographical
-
-Deliverables:
-- memory/consolidation.py
-- memory/abstraction.py
-- eval/tests/test_consolidation_abstraction.py
-- notebooks/06_consolidation_abstract.ipynb
+## Phase 20: Documentation Drift Linter
+Objectives: Keep specs consistent.
+Build:
+- Script: parse README module table + directory `ideas/`; report missing/mismatched modules.
+Exit: Linter passes (0 errors) and integrated into CI.
 
 ---
+# Cross-Cutting Practices
+- Determinism: Capture RNG seeds per run & per tick where stochastic decisions occur.
+- Telemetry Budget: Keep logging payload < X KB/tick (define X early; e.g., 4 KB).
+- Latency Budget: Track real (wall) vs simulated tick; assert real ≤ 2× simulated target median.
+- Fallback Strategy: If a phase fails Exit criteria after max_attempts (e.g., 3), revert to previous stable tag.
 
-## Phase 7 — Introspection Test Suite + Ablations (2–3 weeks)
+# Recommended Order Recap
+0 Scaffold → 1 Memory → 2 DMN skeleton → 3 ILO → 4 Metrics/Reward → 5 μ Scalars → 6 Homeostasis → 7 SML → 8 Drift/V → 9 Visionary/EPV → 10 Identity → 11 Counterfactual → 12 Safety → 13 Adaptive Weights → 14 Retention/Compression → 15 Calibration → 16 Stability Monitor Full → 17 EPV Retention Final → 18 Multi-step Counterfactual → 19 Ablation Harness → 20 Linter.
 
-Tests:
-- Delayed self-consistency across tasks
-- Counterfactual self-recall (red vs blue cube)
-- Prediction-error self-report (inject proprio noise)
-- Narrative reconciliation under conflicting traces
-- Mind-wandering introspection vs task-driven content
+# Minimal Test Suite (Add incrementally)
+- Unit: memory insert/retrieve, retention decision distribution, SML prediction error.
+- Property: invariants (μ within [0,1], |E| budget, non-negative metrics).
+- Regression: stored baseline metrics vs new run deltas.
+- Load: sustained 50k tick run memory growth & latency drift.
 
-Metrics:
-- Identity coherence: avg cosine(self-reports, z_self); drift rate per hour
-- Introspective veridicality: F1 of claims vs memory ground truth
-- Counterfactual sensitivity: detection rate + explanation quality
-- Ablations: remove consolidation / freeze z_self / disable mind-wandering → measure drops
+# Advancement Checklist Template
+Before advancing: All Exit Criteria green, latency within budget, no increase in hard violations, metrics improvement or neutrality relative to prior phase.
 
-Deliverables:
-- eval/suites/introspection_tests.py
-- eval/metrics/identity.py, veridicality.py
-- notebooks/07_introspection_and_ablations.ipynb
-
----
-
-## Phase 8 — Safety, Logging, Reproducibility (ongoing)
-
-- Enforce non-feeling policy (no simulated phenomenology)
-- Red-team prompts to prevent affect simulation; constitutional checks
-- Reproducible seeds; exportable experiment cards (config + commit + metrics)
-- Checkpointing: memory graph snapshots; z_self trajectory plots
-
-Deliverables:
-- safety/policies.yaml
-- eval/redteam/affect_guard_tests.py
-- scripts/export_run_card.py
-- notebooks/08_repro_and_safety.ipynb
-
----
-
-## Minimal Milestone Checklist
-
-- [ ] M1: Isaac Sim + z_assoc; memory write/read working
-- [ ] M2: DMN v1 chooses memory-grounded thought chains
-- [ ] M3: z_self updates and affects candidate scores
-- [ ] M4: Mind-wandering yields self-referential reports
-- [ ] M5: Passes counterfactual and prediction-error introspection tests
-- [ ] M6: Ablations confirm dependence on consolidation and mind-wandering
+(End of guide)

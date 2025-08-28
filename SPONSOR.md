@@ -4,7 +4,7 @@ Purpose: Provide transparent, staged allocation plans for external funding; ensu
 ## Guiding Principles
 - Scientific Integrity: All core algorithmic results reproducible (seeds, configs, metrics artifacts).
 - Open First: Core research code, metrics schemas, and ablation reports remain permissively licensed (unless clearly demarcated applied extensions).
-- Measurable Milestones: Advancement tied to Implementation Phases (see `ImplementationPhases.md`).
+- Measurable Milestones: Advancement tied to Implementation Phases (see [ROADMAP.md](./ROADMAP.md)).
 - Safety & Ethics: No phenomenological suffering simulation; strong instrumentation of drift, stability, and constraint adherence.
 - Transparent Accounting: Monthly public ledger (cloud spend, GPU hours, personnel effort %, experiment counts).
 
