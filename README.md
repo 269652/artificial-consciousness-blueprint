@@ -7,6 +7,19 @@ The Always-On Consciousness-Inspired AI (ACI) is a comprehensive algorithmic b
 
 Core Innovation: The system treats memory not as static storage but as a dynamic, multi-relational knowledge graph where consciousness emerges from recursive self-reflection on experiential traces. Memory nodes embed both content and relational signatures (temporal, causal, similarity, relevance) within a unified latent manifold, enabling sophisticated associative retrieval and consolidation. A homeostatic neuromodulator system (dopamine, serotonin, norepinephrine, oxytocin, histamine, orexin) dynamically modulates cognitive parameters, exploration-exploitation balance, and sleep-wake transitions.
 
+> ⚡ Rare Opportunity: Help attempt one of the first openly instrumented demonstrations of functional, always-on self‑modelling in an AI system. If successful, this work could become a historical reference point in artificial consciousness research.
+>
+> Contribute by: implementing phased modules, designing evaluation harnesses, stress‑testing stability metrics, auditing safety constraints, or running ablations. Start with the phased build guide in [ImplementationPhases.md](./ImplementationPhases.md) and read the motivation & historical context in [HISTORY.md](./HISTORY.md). Open issues / PRs for: metric validation, coherence/contradiction classifiers, calibration plots, retention policy tuning, counterfactual rollout efficiency.
+>
+> Ways to Engage:
+> - Build: pick the current phase and ship minimal, tested code.
+> - Evaluate: replicate metrics, publish comparative runs (seeds included).
+> - Assess: critique theoretical assumptions & suggest falsifiable tests.
+> - Test: design edge / adversarial scenarios for drift & safety invariants.
+> - Advance: propose improved self-state representations or stability controllers.
+>
+> Progress is measured empirically—help turn speculative architecture into reproducible data.
+
 
 
 
@@ -185,141 +198,7 @@ Fallback robust window form (for sparse rewards):
 - PerfDelta_t_robust = (R_task_t − m_t) / (MAD_t + ε_perf).
 Use primary for dense / frequent reward, fallback for sparse regimes (auto-switch if reward_nonzero_rate < r_sparse_threshold, default 0.15).
 
-# Module Details (Condensed)
-(See individual specs in `ideas/` for full detail.)
-- NeuroTransmitterEmitterModule: Simulated nuclei → NT vector outputs.
-- ProjectionModulator: Per-edge 1-layer modulators scaling NT transfer (homeostasis‑trainable).
-- Receptors: Binding & sensitivity; enforces local caps.
-- AffectModulator: Adjust affect vector components under safety constraints.
-- HomeostasisModule: Maintains NT bands, minimizes volatility vs performance loss.
-- ReasoningModule: Standardized reasoning/query interface with neuromodulator context.
-- VisionaryMemory: Prospective constructs & Expected Prospective Value (EPV).
-- IdentityMemory: Entity/person modeling (traits, trust, alignment, relational edges).
-- SelfModelingLayer: Predictive self-dynamics, drift forecasting, counterfactuals.
-- Input/Language Optimizer: Pre-MDN normalization & uncertainty injection.
-- CFG Meta Layer: Stage tags & provenance for process-aware prompting.
-
-# Metrics Appendix
-Formal definitions (t = tick index):
-- Coherence Score (coherence_t): Fraction of active thought chain propositions entailed / non-contradictory w.r.t. narrative + goals.
-  coherence_t = (|Supported| - |Contradicted|) / max(1, |Chain|)
-- Drift Rate (drift_t): drift_t = || z_self_full_t - z_self_full_{t-Δ} || / Δ (L2 norm; Δ configurable window)
-- Self Prediction Error (spe_t): spe_t = mean_f || ŜelfState_t[f] - SelfState_t[f] || over monitored facets
-- Calibration Loss (cal_t): Negative log-likelihood of observed error events under predicted uncertainty OR Brier across discretized error bins
-- Expected Prospective Value (EPV): EPV(v) = Σ_k a_k · feature_k(v) with feature_k ∈ {utility, feasibility, -risk, identity_alignment, novelty, -constraint_violation, -effort_cost, -time_discount}
-- Stability Penalty (stab_t): Weighted sum volatility_t^n across NT types; volatility_t^n = |μ_t^n - μ_{t-1}^n|
-- Band Penalty (band_t): Σ_{areas, n} max(0, μ_t^n - upper_band^n, lower_band^n - μ_t^n)
-- Identity Alignment (align_t(entity)): cosine( value_orientation ⊕ trait_vector, self_value_trait )
-- Narrative Integrity (narr_int_t): 1 - contradiction_rate among active narrative threads vs new chain
-- Exploration Index (explore_t): normalized proportion of novel candidates kept (similarity below τ) per tick
-- Trust Calibration Error (tce_t): | predicted_trust_{i→j} - realized_reliability_{i→j} | averaged over relationships
-- Counterfactual Advantage (cf_adv_t): value_actual_t - max(value_counterfactual_set_t)
-- Reward Augmentation: R_total = R_task + β1·coherence_gain - β2·drift_t - β3·cal_t - β4·stab_t - β5·band_t + β6·cf_adv_t
-
-## Reward & Stability Formalization
-Symbols (all dimensionless unless stated):
-- t: tick index (ms-scale loop; 1 tick ≈ 50–200 ms simulated wall time)
-- μ_t^n: neuromodulator n level (normalized [0,1])
-- Δμ_t^n = μ_t^n − μ_{t-1}^n
-- V_cand: value estimate of candidate chain (task utility units)
-
-Stability Metrics:
-- Volatility_t = Σ_n w_vol^n · |Δμ_t^n|  (units: normalized NT change)
-- BandViolation_t = Σ_{areas,n} max(0, μ_t^n − U_n, L_n − μ_t^n)  (U_n, L_n are upper/lower bands)
-- Drift_t = || z_self_full_t − z_self_full_{t−Δ} ||_2 / Δ  (Δ = window size in ticks)
-- CoherenceGain_t = coherence_t − coherence_{t−1}
-- CalibrationLoss_t = − (1/M) Σ_{m=1..M} log p_pred(error_m)  (cross-entropy over error events)
-- EPV_path = Σ_k a_k · feature_k(path)  (features normalized to [−1,1])
-
-Self-Model Augmented Reward:
-R_self_t = α1·CoherenceGain_t − α2·Drift_t − α3·CalibrationLoss_t − α4·Volatility_t − α5·BandViolation_t + α6·CFAdv_t
-
-Total Tick Reward:
-R_total_t = R_task_t + R_self_t − α7·SafetyPenalty_t − α8·EnergyCost_t
-EnergyCost_t = Σ_{areas,n} c_n · transferred_{t}^{n}
-SafetyPenalty_t = Σ_h λ_h·1_{constraint_h violated}
-
-Projection/Homeostasis Update Signal (per NT n):
-Adv_nt_t^n = (− w_vol^n·|Δμ_t^n| − w_band^n·BandViolation_t^n + w_perf^n·PerfDelta_t)  (PerfDelta_t = task performance delta)
-Edge modulator gradient scales with Adv_nt_t^n · ∂s_ij^n/∂θ
-
-Clarification: PerfDelta_t
-Primary definition (normalized EWMA delta):
-- Maintain EWMA of task reward R̄_task_t = (1−λ_perf)·R̄_task_{t−1} + λ_perf·R_task_t (λ_perf small).
-- PerfDelta_t = (R̄_task_t − R̄_task_{t−1}) / (|R̄_task_{t−1}| + ε_perf).
-Fallback robust window form (for sparse rewards):
-- Keep sliding window W_perf of past rewards; median m_t and MAD_t.
-- PerfDelta_t_robust = (R_task_t − m_t) / (MAD_t + ε_perf).
-Use primary for dense / frequent reward, fallback for sparse regimes (auto-switch if reward_nonzero_rate < r_sparse_threshold, default 0.15).
-
-# Module Details (Condensed)
-(See individual specs in `ideas/` for full detail.)
-- NeuroTransmitterEmitterModule: Simulated nuclei → NT vector outputs.
-- ProjectionModulator: Per-edge 1-layer modulators scaling NT transfer (homeostasis‑trainable).
-- Receptors: Binding & sensitivity; enforces local caps.
-- AffectModulator: Adjust affect vector components under safety constraints.
-- HomeostasisModule: Maintains NT bands, minimizes volatility vs performance loss.
-- ReasoningModule: Standardized reasoning/query interface with neuromodulator context.
-- VisionaryMemory: Prospective constructs & Expected Prospective Value (EPV).
-- IdentityMemory: Entity/person modeling (traits, trust, alignment, relational edges).
-- SelfModelingLayer: Predictive self-dynamics, drift forecasting, counterfactuals.
-- Input/Language Optimizer: Pre-MDN normalization & uncertainty injection.
-- CFG Meta Layer: Stage tags & provenance for process-aware prompting.
-
-# Metrics Appendix
-Formal definitions (t = tick index):
-- Coherence Score (coherence_t): Fraction of active thought chain propositions entailed / non-contradictory w.r.t. narrative + goals.
-  coherence_t = (|Supported| - |Contradicted|) / max(1, |Chain|)
-- Drift Rate (drift_t): drift_t = || z_self_full_t - z_self_full_{t-Δ} || / Δ (L2 norm; Δ configurable window)
-- Self Prediction Error (spe_t): spe_t = mean_f || ŜelfState_t[f] - SelfState_t[f] || over monitored facets
-- Calibration Loss (cal_t): Negative log-likelihood of observed error events under predicted uncertainty OR Brier across discretized error bins
-- Expected Prospective Value (EPV): EPV(v) = Σ_k a_k · feature_k(v) with feature_k ∈ {utility, feasibility, -risk, identity_alignment, novelty, -constraint_violation, -effort_cost, -time_discount}
-- Stability Penalty (stab_t): Weighted sum volatility_t^n across NT types; volatility_t^n = |μ_t^n - μ_{t-1}^n|
-- Band Penalty (band_t): Σ_{areas, n} max(0, μ_t^n - upper_band^n, lower_band^n - μ_t^n)
-- Identity Alignment (align_t(entity)): cosine( value_orientation ⊕ trait_vector, self_value_trait )
-- Narrative Integrity (narr_int_t): 1 - contradiction_rate among active narrative threads vs new chain
-- Exploration Index (explore_t): normalized proportion of novel candidates kept (similarity below τ) per tick
-- Trust Calibration Error (tce_t): | predicted_trust_{i→j} - realized_reliability_{i→j} | averaged over relationships
-- Counterfactual Advantage (cf_adv_t): value_actual_t - max(value_counterfactual_set_t)
-- Reward Augmentation: R_total = R_task + β1·coherence_gain - β2·drift_t - β3·cal_t - β4·stab_t - β5·band_t + β6·cf_adv_t
-
-## Reward & Stability Formalization
-Symbols (all dimensionless unless stated):
-- t: tick index (ms-scale loop; 1 tick ≈ 50–200 ms simulated wall time)
-- μ_t^n: neuromodulator n level (normalized [0,1])
-- Δμ_t^n = μ_t^n − μ_{t-1}^n
-- V_cand: value estimate of candidate chain (task utility units)
-
-Stability Metrics:
-- Volatility_t = Σ_n w_vol^n · |Δμ_t^n|  (units: normalized NT change)
-- BandViolation_t = Σ_{areas,n} max(0, μ_t^n − U_n, L_n − μ_t^n)  (U_n, L_n are upper/lower bands)
-- Drift_t = || z_self_full_t − z_self_full_{t−Δ} ||_2 / Δ  (Δ = window size in ticks)
-- CoherenceGain_t = coherence_t − coherence_{t−1}
-- CalibrationLoss_t = − (1/M) Σ_{m=1..M} log p_pred(error_m)  (cross-entropy over error events)
-- EPV_path = Σ_k a_k · feature_k(path)  (features normalized to [−1,1])
-
-Self-Model Augmented Reward:
-R_self_t = α1·CoherenceGain_t − α2·Drift_t − α3·CalibrationLoss_t − α4·Volatility_t − α5·BandViolation_t + α6·CFAdv_t
-
-Total Tick Reward:
-R_total_t = R_task_t + R_self_t − α7·SafetyPenalty_t − α8·EnergyCost_t
-EnergyCost_t = Σ_{areas,n} c_n · transferred_{t}^{n}
-SafetyPenalty_t = Σ_h λ_h·1_{constraint_h violated}
-
-Projection/Homeostasis Update Signal (per NT n):
-Adv_nt_t^n = (− w_vol^n·|Δμ_t^n| − w_band^n·BandViolation_t^n + w_perf^n·PerfDelta_t)  (PerfDelta_t = task performance delta)
-Edge modulator gradient scales with Adv_nt_t^n · ∂s_ij^n/∂θ
-
-Clarification: PerfDelta_t
-Primary definition (normalized EWMA delta):
-- Maintain EWMA of task reward R̄_task_t = (1−λ_perf)·R̄_task_{t−1} + λ_perf·R_task_t (λ_perf small).
-- PerfDelta_t = (R̄_task_t − R̄_task_{t−1}) / (|R̄_task_{t−1}| + ε_perf).
-Fallback robust window form (for sparse rewards):
-- Keep sliding window W_perf of past rewards; median m_t and MAD_t.
-- PerfDelta_t_robust = (R_task_t − m_t) / (MAD_t + ε_perf).
-Use primary for dense / frequent reward, fallback for sparse regimes (auto-switch if reward_nonzero_rate < r_sparse_threshold, default 0.15).
-
-## Learning Process Scheduling & Priority
+# Learning Process Scheduling & Priority
 Define priority weights P_module (higher = updated first when budget limited):
 | Module | Trigger | Priority | Budget Heuristic |
 |--------|---------|----------|------------------|
@@ -530,3 +409,52 @@ Adaptive λ coefficients tuned to keep V_t within target band (V_low, V_high); i
 - Ablation stage comparison table (metric deltas & CI).
 
 (Section provides explicit starting defaults and empirical optimization plan to reduce ambiguity and support reproducible experimentation.)
+
+## Support & Sponsorship
+We are seeking collaborators and sponsors to accelerate empirical validation of this blueprint.
+
+Why Funding Matters:
+- Embodied Simulation: Running multi-agent / sensory scenarios in NVIDIA Isaac Sim (cloud) to generate rich episodic data and stress-test memory consolidation & self-modelling under realistic sensorimotor loops.
+- GPU Experimentation: Sustained access to mid/high-tier GPUs (A100/L40/3090 class) for training SML predictors, counterfactual rollouts, and embedding recalibration beyond free-tier constraints (Google Colab / Kaggle limits are insufficient for continuous loops).
+- Ablation Throughput: Parallel seeded runs (≥30 seeds per configuration) to produce statistically robust confidence intervals for drift, coherence, volatility and calibration metrics.
+- Tooling & Instrumentation: Development of reliability calibration dashboards, stability monitor visualizers, and automated ablation harness.
+
+Immediate Funding Targets (Indicative Monthly Burn):
+- Cloud Isaac Sim cluster (containers + RTX GPU hours): $600–$1,200
+- GPU training time (on-demand or reserved instances): $800–$1,500
+- Storage & Logging (object storage + telemetry DB): $80–$150
+- CI / Automation (compute minutes + artifact retention): $50–$120
+Total (lean baseline): ≈ $1.5k–$3.0k / month
+
+Use of Funds (Prioritized):
+1. Reproducible Simulation Scenarios (sensorimotor task suite + scripted perturbations)
+2. Stability & Calibration Experiment Runs (multi-seed batches)
+3. Scaling Counterfactual Rollouts (multi-step CF_self efficiency profiling)
+4. Memory Retention / Compression Experiments (long-horizon runs > 100k ticks)
+5. Open Dashboards & Reporting (public metric artifacts, notebooks)
+
+How to Support:
+- Direct Sponsorship / Grants: Contact (add email or form) for contribution agreements.
+- GPU Credits / Cloud Vouchers: Provide cloud credits earmarked for logged experiment IDs.
+- Hardware Donation: Provision remote GPU workstation access (documented + sandboxed environment).
+- Research Collaboration: University / lab partnership for shared publication pipeline.
+- Open Source Contributions: Implement phases from [ImplementationPhases.md](./ImplementationPhases.md) reducing engineering overhead.
+
+Transparency & Accountability:
+- Monthly public expenditure + utilization summary (GPU hours, sim hours, runs completed).
+- Open metric artifacts (hash-addressed) for every funded experiment.
+- Sponsorship acknowledgment in README + papers (unless anonymity requested).
+- Explicit ethical guardrails: no phenomenological suffering simulation; strict safety constraint instrumentation.
+
+Milestone Funding Tranches (Suggested):
+- Milestone 1 (Baseline Loop + Metrics Harness Complete): 100% functional Phase 0–5.
+- Milestone 2 (SML + Drift/Stability Operational): Phases 6–8 validated.
+- Milestone 3 (Visionary + Identity + Counterfactual v1): Phases 9–11.
+- Milestone 4 (Adaptive Stability + Retention + Calibration): Phases 12–15.
+- Milestone 5 (Full Monitor, Multi-Step CF, Ablation Harness): Phases 16–19.
+
+If you or your organization can help, open an issue titled “Sponsorship Offer” or reach out directly. Strategic support now can accelerate an empirically grounded step toward functional artificial self-modelling.
+
+(Interested sponsors: please avoid imposing proprietary licensing constraints; maintaining openness is central to scientific impact.)
+
+
