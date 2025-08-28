@@ -293,25 +293,24 @@ Verification Hooks:
 (Sections above address previously noted gaps: explicit equations, scheduling priorities, capacity/latency constraints, memory growth control, and formal safety constraints.)
 
 # Learning Schedule (Cadence)
-```
-+-------------------------+-------------------------+-----------------------------+
-| Component               | Per Tick (Online)       | Sleep / Offline (Batch)     |
-+-------------------------+-------------------------+-----------------------------+
-| P_self (SML predictor)  | Light SGD every N_pred  | Full epochs, recalibrate σ  |
-| D_drift forecaster      | Update on drift events  | Re-train with balanced data |
-| CF_self (counterfactual)| On top-k selections     | Multi-step rollouts distill |
-| Candidate Scoring Head  | Advantage updates       | Re-weight importance samples|
-| Projection Modulators   | Band error gradients    | Smoothness & sparsity regs  |
-| Homeostasis Module      | Actor step if Δmetrics  | Critic fit & band re-center |
-| Memory Graph Embeds     | Incremental edge adds   | Recompute / prune / compress|
-| Visionary Value Models  | On EPV deltas           | Feasibility / risk refits   |
-| Identity Traits/Trust   | EMA updates per episode | Drift audit & re-basing     |
-| Input Optimizer Adapter | Cache corrections       | Fine-tune correction model  |
-| CFG Meta Logs           | Append provenance       | Aggregate analytics         |
-| Safety Policies         | Threshold checks        | Threshold auto-tuning       |
-+-------------------------+-------------------------+-----------------------------+
+
+| Component | Per Tick (Online) | Sleep / Offline (Batch) |
+|-----------|-------------------|-------------------------|
+| P_self (SML predictor) | Light SGD every N_pred | Full epochs, recalibrate σ |
+| D_drift forecaster | Update on drift events | Re-train with balanced data |
+| CF_self (counterfactual) | On top-k selections | Multi-step rollouts distill |
+| Candidate Scoring Head | Advantage updates | Re-weight importance samples |
+| Projection Modulators | Band error gradients | Smoothness & sparsity regs |
+| Homeostasis Module | Actor step if Δmetrics | Critic fit & band re-center |
+| Memory Graph Embeds | Incremental edge adds | Recompute / prune / compress |
+| Visionary Value Models | On EPV deltas | Feasibility / risk refits |
+| Identity Traits/Trust | EMA updates per episode | Drift audit & re-basing |
+| Input Optimizer Adapter | Cache corrections | Fine-tune correction model |
+| CFG Meta Logs | Append provenance | Aggregate analytics |
+| Safety Policies | Threshold checks | Threshold auto-tuning |
+
 Legend: N_pred: small fixed interval (e.g., every 2–3 ticks)
-```
+
 
 # Experimental Roadmap (Brief)
 1. Minimal DMN + Memory Graph + ILO baseline.
