@@ -415,7 +415,7 @@ Adaptive λ coefficients tuned to keep V_t within target band (V_low, V_high); i
 
 (Section provides explicit starting defaults and empirical optimization plan to reduce ambiguity and support reproducible experimentation.)
 
-## Support & Sponsorship
+## [Support & Sponsorship](./SPONSOR.md)
 We are seeking collaborators and sponsors to accelerate empirical validation of this blueprint.
 
 Why Funding Matters:
