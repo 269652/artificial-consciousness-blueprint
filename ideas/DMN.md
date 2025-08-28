@@ -17,11 +17,65 @@ For full technical details, see the canonical DMN algorithm documentation.
 
 ## 3.1. [Input Gathering and Preprocessing](steps/3.1.md)
 
-- Sensory inputs (vision, audio, proprioception) are encoded into latent embeddings: zv, za (text, prosody), zp.
-- Associative cortices bind cross-modal observations into concise descriptive thought snippets.
-- Combine sensory embeddings and inner speech text into a composite input.
-- SML Hook (Pre-Prediction): Assemble provisional SelfState_t (μ / affect summary, active goals, recent reward rate, prior coherence, drift estimate). Call P_self(SelfState_t) to produce ŜelfState_{t+1|prior} retained for later error + calibration metrics.
+Concise Sensory & Associative Cortex Sub-Algorithm (Isaac Sim Embodiment)  
+Goal: Produce a compact, goal‑relevant multimodal token set + minimal uncertainty signals for downstream parsing. No speculative mechanisms here.
 
+Algorithm (per tick):
+1. Raw Capture
+   - Vision: RGB (front), optional depth, instance segmentation ids.
+   - Audio: Short window waveform (≈200 ms), streaming ASR partial tokens + confidences.
+   - Proprioception: Joint positions q, velocities dq, torques τ, end‑effector pose, contact forces.
+
+2. Encoding
+   - VisionEncoder → scene embedding z_v_scene and object slots {z_v_i} (slot attention or DETR style; limit i ≤ K_obj).
+   - AudioEncoder → acoustic embedding z_a_acoustic + prosody vector z_a_pros (pitch, energy); retain ASR tokens (text_partial, conf).
+   - ProprioEncoder → body state z_p_body (MLP/GRU over [q,dq,τ,contacts]) + status scalars (energy_draw, balance_margin).
+
+3. Temporal Normalization
+   - Align modalities to tick timestamp (latest sample or linear interpolate previous frame).
+   - Apply simple EMA smoothing over last W frames (W small, e.g., 3) to obtain z̃_v_scene, z̃_a_acoustic, z̃_p_body.
+
+4. Event Extraction (lightweight)
+   - Novel object: new segmentation id not in last N ticks → event token e_novel.
+   - Motion spike: |optical_flow_mean − prev| > θ_flow → e_motion.
+   - Contact change: new contact or force drop → e_contact.
+   - Speaker change: ASR diarization id change → e_speaker.
+
+5. Fusion
+   - Form token list T_raw = [z̃_v_scene] ∪ {z_v_i} ∪ [z̃_a_acoustic, z_a_pros] ∪ [z̃_p_body] ∪ Events{e_*}.
+   - Cross‑attention (single pass) with learnable fusion query q_f → fused embedding z_fused.
+
+6. Salience Scoring
+   - For each token t ∈ T_raw compute s(t) = w_nov·novelty + w_rec·recency + w_goal·goal_overlap + w_evt·event_flag.
+   - Keep top-k (k small, e.g., 12) → S_summary (discard low salience tokens to enforce bandwidth cap).
+
+7. Uncertainty Estimation (minimal)
+   - Vision u_v: normalized reconstruction error (autoencoder) or average object slot dropout ratio.
+   - Audio u_a: 1 − mean(ASR_token_conf).
+   - Proprio u_p: mean z‑score(|τ_residual|) clipped.
+   - input_uncertainty = (w_v u_v + w_a u_a + w_p u_p).
+
+8. Output Package
+```
+SensoryPacket = {
+  sensory_tokens: S_summary,         # compact multimodal set
+  object_slots: {z_v_i},             # for spatial reasoning
+  body_state: z̃_p_body,             # proprio summary
+  events: {e_*},                     # sparse event markers
+  text_stream: ASR_partial?,         # optional current text
+  fused_context: z_fused,            # global snapshot
+  uncertainty: {u_v, u_a, u_p, input_uncertainty}
+}
+```
+
+9. SML Hook (minimal)
+   - Provide body_state and input_uncertainty to SelfState builder; no other transformation here.
+
+Notes:
+- All steps O(k) in number of retained tokens; enforce k & K_obj caps to keep latency predictable.
+- No counterfactuals, calibration fitting, neuromodulator modulation, or classifier logic at this stage.
+
+---
 ### 3.1.1 Input / Language Optimizer (ILO)
 Purpose: Clean, normalize, segment, and uncertainty‑annotate inbound linguistic / symbolic streams (ASR transcripts, OCR text, user chat, internal captions) to reduce downstream cognitive load and parsing errors.
 
