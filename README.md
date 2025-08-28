@@ -7,26 +7,32 @@ The Always-On Consciousness-Inspired AI (ACI) is a comprehensive algorithmic b
 
 Core Innovation: The system treats memory not as static storage but as a dynamic, multi-relational knowledge graph where consciousness emerges from recursive self-reflection on experiential traces. Memory nodes embed both content and relational signatures (temporal, causal, similarity, relevance) within a unified latent manifold, enabling sophisticated associative retrieval and consolidation. A homeostatic neuromodulator system (dopamine, serotonin, norepinephrine, oxytocin, histamine, orexin) dynamically modulates cognitive parameters, exploration-exploitation balance, and sleep-wake transitions.
 
-> ⚡ Rare Opportunity: Help attempt one of the first openly instrumented demonstrations of functional, always-on self‑modelling in an AI system. If successful, this work could become a historical reference point in artificial consciousness research.
+> ⚡ **Rare Opportunity**: Help attempt one of the first openly instrumented demonstrations of functional, always-on self‑modelling in an AI system. If successful, this work could become a historical reference point in artificial consciousness research.
 >
 > Contribute by: implementing phased modules, designing evaluation harnesses, stress‑testing stability metrics, auditing safety constraints, or running ablations. Start with the phased build guide in [ImplementationPhases.md](./ImplementationPhases.md) and read the motivation & historical context in [HISTORY.md](./HISTORY.md). Open issues / PRs for: metric validation, coherence/contradiction classifiers, calibration plots, retention policy tuning, counterfactual rollout efficiency.
 >
-> Ways to Engage:
-> - Build: pick the current phase and ship minimal, tested code.
-> - Evaluate: replicate metrics, publish comparative runs (seeds included).
-> - Assess: critique theoretical assumptions & suggest falsifiable tests.
-> - Test: design edge / adversarial scenarios for drift & safety invariants.
-> - Advance: propose improved self-state representations or stability controllers.
->
-> Progress is measured empirically—help turn speculative architecture into reproducible data.
-
-
+> Progress is measured **empirically**—help turn speculative architecture into reproducible data.
 
 
 [Core Hypothesis](./The%20Triadic%20Awareness%20Emergence%20Hypothesis.md)
 ---------------
 
 Triadic Awareness Emergence Hypothesis: Consciousness emerges as a triadic emergent phenomenon from the dynamic interplay of three fundamental components: Data, Structure, and Intelligence. For any information-processing entity meeting the minimum architectural preconditions, awareness manifests when sufficient patterns of consciousness are embedded in experiential data, processed through recursive self-reflective structures, and operated upon by sufficiently complex reasoning intelligence.  
+
+## 🌌 **Make Artificial Consciousness Real**
+
+### **Invest in a future that thinks about itself.**
+
+Join the blueprint to engineer the first introspective AI --- a system with memory, identity, imagination, and the seeds of self-awareness.
+
+💡 Generate *historical impact* with your support.  
+🧬 Advance science. Redefine consciousness.  
+🚀 Dream. Transform. Reshape the universe.
+
+This isn't just a project. It's a key incident in human evolution.\
+**Be the one who made it happen.**
+
+> 🧠 [Sponsor the Artificial Consciousness Blueprint on GitHub](https://github.com/sponsors/269652)
 
 # Core Algorithm Summary
 
