@@ -1,342 +1,155 @@
-NeuroTransmitter Projection Mapping NN (NTPM-NN): Design and propagation routine
-================================================================================
-
-Below is a concrete, implementable architecture that encodes inter‑area neurotransmitter projections as neural networks on edges, supports dynamic connection matching, and regulates transferred NT amounts via a learned projection homeostasis modulator optimized for coherence/flow/stability.
-
-1) Objects and state
---------------------
-
--   BrainArea i
-
-    -   state:
-
-        -   μ_i: neuromodulator vector snapshot (DA, 5HT, NE, OXT, TST, HA, ORX)
-
-        -   A_i: affect vector snapshot (empathy, beauty, joy, hope, gratitude, etc.)
-
-        -   z_self_i: local self-model summary
-
-        -   cfg_i: active CFG node tag(s)
-
-        -   context_i: compact context features (task, urgency, safety floor, recent Δcoherence, Δuncertainty)
-
-    -   learned components:
-
-        -   OutProjNN_i: two-layer MLP mapping "emission context" to a 128-d link field and a destination-location field
-
-        -   InRecvNN_i: two-layer MLP mapping "reception context" to a 128-d link field and a destination-location field (first layer used for matching)
-
-        -   Local clamps: caps for inbound/outbound NT volumes, per-NT type scaling
-
--   Edge (i → j)
-
-    -   static metadata: bandwidth cap per NT type, latency, distance/cost
-
-    -   learned scaler: EdgeGate_ij (tiny MLP) that can softly open/close edge based on global ctx
-
--   Emitter nodes (DA/5HT/NE/OXT/H A/ORX/TST sources)
-
-    -   emit levels e_n (per NT type n) driven by upstream controllers
-
-    -   optional per-area routing prefs
-
--   Projection Homeostasis Modulator (PHM)
-
-    -   PHM_NN: learned critic/actor that outputs per-edge, per-NT scaling factors s_ij^n and safety clamps, optimizing stability of thought coherence, flow continuity, self-model stability, calibration, and safety
-
-2) Out/IN representation and matching
--------------------------------------
-
-Each BrainArea carries:
-
--   OutProjNN_i(x_i) → {L_out_i ∈ R^128, D_out_i ∈ R^K}
-
-    -   Layer 1: L_out_i (128 "link channels" representing potential outgoing synapses/tracts)
-
-    -   Layer 2: D_out_i (distribution over destination anatomical subfields K in target areas; can be logits indexed by known atlas or learned anchors)
-
--   InRecvNN_j(y_j) → {L_in_j ∈ R^128, D_in_j ∈ R^K}
-
-    -   Layer 1: L_in_j (128 "link acceptors" representing receivable synapses)
-
-    -   Layer 2: D_in_j (destination location weighting inside area j)
-
-Context inputs:
-
--   x_i = concat(μ_i, A_i, z_self_i_summary, cfg_i_embed, context_i)
-
--   y_j = concat(μ_j, A_j, z_self_j_summary, cfg_j_embed, context_j)
-
-Connection matching:
-
--   Link compatibility matrix C_ij = sigmoid(L_out_i ⊙ L_in_j) or cosine(L_out_i, L_in_j)
-
--   Destination compatibility R_ij = softmax(D_out_i) - softmax(D_in_j)^T projected to a scalar via selected subfield pairing (or a sum over aligned top-k)
-
--   Edge gate g_ij = EdgeGate_ij(global_ctx) ∈
-
--   Effective connectivity weight W_ij = g_ij - C_ij_scalar - R_ij_scalar
-
-    -   C_ij_scalar can be mean or learned pooling over the 128 channels; optionally keep channelwise W_ij[c] for multi-channel transfer
-
-Notes:
-
--   128 is a good default; make it hyperparameterizable.
-
--   If you want sparse matching, apply top-k over channels before pooling to enforce discrete tract selection.
-
-3) NT transfer computation
---------------------------
-
-For each NT type n (e.g., DA, 5HT, NE, OXT, TST, HA, ORX):
-
--   Available emission from area i: A_i^n = clamp(e_n(i), 0, cap_out_i^n)
-
--   PHM scaling for n on edge i→j: s_ij^n = PHM_NN(ctx_global, ctx_i, ctx_j, edge_meta_ij, recent_metrics)
-
--   Raw transfer weight: T_raw_ij^n = W_ij - s_ij^n
-
--   Normalize across outgoing edges of i for conservation (optional):
-
-    -   \hat{T}*ij^n = T_raw_ij^n / Σ*{k ∈ N_out(i)} T_raw_ik^n
-
--   Amount transferred:
-
-    -   ΔNT_ij^n = min(A_i^n, cap_edge_ij^n) - \hat{T}_ij^n
-
--   Update emitter reservoir (or local μ_i pool):
-
-    -   A_i^n ← A_i^n - ΔNT_ij^n
-
--   Accumulate at receiver j:
-
-    -   Influx_j^n += ΔNT_ij^n (subject to local receptor density caps and safety clamps)
-
-Optional channelwise transfer:
-
--   If using channelwise W_ij[c], compute ΔNT_ij^n[c] then sum over c to get ΔNT_ij^n.
-
-4) Reception, binding, and local effect
----------------------------------------
-
-At receiver j:
-
--   Receptor gate (local physiology):
-
-    -   Effective bound_j^n = bind(InRecvNN_j's densities, Influx_j^n, local θ_bind_j^n)
-
-    -   Saturation and spillover management (caps on bound fraction; spillover→decay or feedback)
-
--   Convert to effective neuromodulator influence:
-
-    -   μ_j[n] ← μ_j[n] + f_bind(bound_j^n; density_j^n, sensitivity_j^n)
-
--   Safety clamps:
-
-    -   PHM_NN can output per-NT ceiling ceilings_j^n and ramp rates r_j^n
-
-    -   Enforce dμ_j[n]/dt ≤ r_j^n and μ_j[n] ≤ ceilings_j^n
-
--   Log receptor utilization and residuals for homeostatic learning
-
-5) Projection Homeostasis Modulator (PHM)
------------------------------------------
-
-PHM_NN inputs:
-
--   Global ctx: rolling metrics of DMN coherence, uncertainty drop, calibration, safety violations, identity drift, flow continuity
-
--   Edge/meta: distance, latency, historical efficacy, risk penalties
-
--   Area ctx: μ_i, μ_j, A_i, A_j, cfg_i, cfg_j, recent selection/valuation stats (VS/PFC outcomes), receptor utilization stats, saturation, spillover
-
--   Objectives (targets):
-
-    -   Stability: minimize volatility of μ across areas and ticks, maintain in-band ranges
-
-    -   Coherence/flow: maximize ΔC (coherence gain) and continuous chain formation
-
-    -   Safety/calibration: minimize safety_penalty, calibration_gap
-
-    -   Identity stability: limit rapid drift in z_self; preserve narrative consistency
-
-    -   Efficiency: minimize energy cost proxies (total NT moved, saturation/spillover)
-
-PHM_NN outputs:
-
--   s_ij^n scaling factors ∈ [0, s_max] per edge and NT
-
--   Safety clamps: {ceilings_j^n, ramps r_j^n}
-
--   Edge gating hints: biases for EdgeGate_ij
-
-Training signals:
-
--   Reward R_t = α1-ΔC + α2-ΔFlow - α3-Volatility(μ) - α4-SafetyPenalty - α5-CalGap - α6-EnergyCost - α7-Drift(z_self)
-
--   Credit assignment:
-
-    -   Eligibility traces over recent projections (i→j, per NT)
-
-    -   Auxiliary supervised heads predicting DMN metrics from projected s_ij^n to stabilize learning
-
-    -   Regularizers:
-
-        -   Smoothness on s_ij^n over time (temporal L2)
-
-        -   Sparsity on active edges (L1 on edge usage)
-
-        -   Range utilization (keep μ within bands)
-
-        -   Anti-oscillation penalties
-
-Optimization:
-
--   Actor-critic or DPO-like regression to target s_ij^n*
-
--   Jointly train EdgeGate_ij and Out/IN MLPs with PHM (multi-loss with respective regularizers)
-
-6) Forward pass per DMN tick (projection phase)
------------------------------------------------
-
+Simplified Neurotransmitter Projection Modulator (Direct Wiring Variant)
+=====================================================================
+
+Goal
+----
+Provide a minimal, implementable mechanism to route neurotransmitter (NT) amounts from emitting brain areas to receiving areas without latent link / destination embeddings. Each projection (i→j) and NT type n has a tiny trainable 1‑layer modulator that scales release. A Homeostasis Module (HM) trains these modulators to keep NT levels within adaptive target bands while supporting coherence / stability.
+
+Key Differences vs Original Design
+----------------------------------
+- No 128‑d link channels or destination subfield vectors.
+- No matching step (compatibility matrices removed).
+- Each anatomical / functional edge is explicit: a fixed adjacency list.
+- Per edge & NT: a single scalar base gain plus a 1‑layer (affine + nonlinearity) modulator.
+- Homeostasis Module supplies training signals (reward + band errors) to adjust modulators.
+- Strongly reduced compute: O(E * |NT|) per tick.
+
+1) Core Objects
+---------------
+BrainArea i:
+- μ_i: vector of current neuromodulator levels (|NT| = 7 default: DA, 5HT, NE, OXT, TST, HA, ORX)
+- reservoirs_i (optional): emission pools per NT (else use μ_i directly)
+- targets_i: per NT (lower_band_i^n, upper_band_i^n)
+- ctx_i (minimal): optional small feature vector (e.g., recent volatility, safety flag, coherence contribution)
+
+Edge / Projection (i → j):
 For each NT type n:
+- base_gain_ij^n: scalar (initialized ~ 1.0)
+- Modulator f_ij^n: 1‑layer NN producing scaling s_ij^n ∈ [0, s_max]
+  s_ij^n = σ( w_ij^n · concat(μ_i^n, μ_j^n, band_err_i^n, band_err_j^n, global_metrics) + b_ij^n ) * s_max
 
-1.  For each area i:
+Global:
+- Homeostasis Module (HM): adjusts (w, b, base_gain) to minimize band errors, volatility, instability penalties.
+- Safety limits: hard ceilings and max Δ per tick per NT per area.
 
-    -   Compute OutProjNN_i(x_i) → L_out_i, D_out_i
+2) Transfer Computation (Per Tick)
+----------------------------------
+For each edge (i→j) and NT n:
+1. Source availability: avail_i^n = clamp(reservoirs_i^n or μ_i^n, 0, cap_out_i^n)
+2. Modulator scale: s_ij^n = f_ij^n(...)
+3. Raw release: release_raw_ij^n = base_gain_ij^n * s_ij^n * avail_i^n
+4. Edge cap: release_capped_ij^n = min(release_raw_ij^n, cap_edge_ij^n)
+5. Deduct from source: reservoirs_i^n -= release_capped_ij^n (or μ_i^n if using direct)
+6. Add to receiver influx: influx_j^n += release_capped_ij^n
 
-    -   Compute available A_i^n
+Reception & Update:
+- Effective uptake: bound_j^n = min(influx_j^n, cap_recv_j^n)
+- μ_j^n ← clamp( μ_j^n + k_bind_j^n * bound_j^n, 0, hard_ceiling_j^n )
+- Spillover (if any): influx_j^n - bound_j^n can be logged / decayed.
 
-2.  For each area j:
+3) Band Error & Signals
+-----------------------
+For each area i and NT n after updates:
+- band_err_i^n = 0 if lower_band_i^n ≤ μ_i^n ≤ upper_band_i^n else signed distance to nearest boundary.
+- volatility_i^n = |μ_i^n - μ_i^n(prev)|
+Aggregate metrics each tick:
+- stability_penalty = Σ_i Σ_n volatility_i^n
+- band_penalty = Σ_i Σ_n |band_err_i^n|
+- safety_penalty (boolean events → large constant)
+- coherence_gain (input from DMN loop if available)
 
-    -   Compute InRecvNN_j(y_j) → L_in_j, D_in_j
+4) Homeostasis Module (HM)
+--------------------------
+Inputs (per edge & NT during learning step):
+- (μ_i^n, μ_j^n, band_err_i^n, band_err_j^n, stability_penalty_local, global_metrics)
+Outputs / Parameters:
+- Adjust w_ij^n, b_ij^n (gradient step)
+- Optionally adjust base_gain_ij^n (slow timescale)
+Objective:
+Maximize reward R_t:
+R_t = α1 * coherence_gain - α2 * band_penalty - α3 * stability_penalty - α4 * safety_penalty
+Add regularizers:
+- L_smooth: (s_ij^n - s_ij^n(prev))^2
+- L_sparsity: encourage lower average s_ij^n (optional L1 on s)
+- L_energy: Σ release_capped_ij^n (penalize excessive total movement)
+Total loss per batch: L = -R_t + β1 L_smooth + β2 L_sparsity + β3 L_energy
 
-3.  For each edge (i→j):
+5) Training Procedure
+----------------------
+Online (each tick or mini-batch of ticks):
+- Collect tuples: (edge, n, context_features, s_ij^n, band_errs, R_t components)
+- Compute R_t
+- Backprop through s_ij^n to w_ij^n, b_ij^n (detach μ dynamics if simplifying) using loss L
+Periodic (sleep / consolidation):
+- Refit base_gain_ij^n via simple regression to average beneficial release fraction
+- Prune edges where mean s_ij^n < ε and contribution negligible
+- Re‑center target bands if chronically saturated / underfilled
 
-    -   Compute W_ij via channel and destination compatibility and edge gate
+6) Pseudocode (Simplified)
+--------------------------
+Initialize all base_gain_ij^n = 1.0, w_ij^n ~ N(0, 0.1), b_ij^n = 0
 
-    -   Compute s_ij^n = PHM_NN(...)
+function tick_projection():
+  for each area: compute band_err_i^n
+  R_components reset accumulators
+  for each edge (i,j):
+    for each NT n:
+      avail = clamp(source(i,n), 0, cap_out_i^n)
+      x = [μ_i^n, μ_j^n, band_err_i^n, band_err_j^n, global_metrics]
+      s = sigmoid(dot(w_ij^n, x) + b_ij^n) * s_max
+      raw = base_gain_ij^n * s * avail
+      sent = min(raw, cap_edge_ij^n)
+      source(i,n) -= sent
+      influx(j,n) += sent
+  for each area j, NT n:
+      bound = min(influx(j,n), cap_recv_j^n)
+      μ_j^n = clamp( μ_j^n + k_bind_j^n * bound, 0, hard_ceiling_j^n )
+  compute updated band_err, volatility, coherence_gain
+  R_t = α1*coherence_gain - α2*band_penalty - α3*stability_penalty - α4*safety_penalty
+  accumulate training batch
+  if ready_to_update(): optimize_modulators(batch)
 
-    -   Compute ΔNT_ij^n and apply edge cap
+function optimize_modulators(batch):
+  for each sample: forward s, compute loss L, backprop to w,b
+  optional: slow update to base_gain (e.g., EMA toward (desired_release / avail))
 
-4.  Conservation step (optional): normalize transfers per i across j
-
-5.  Apply transfers: update emit pools, receiver influx, then receptor binding and μ_j updates
-
-6.  Apply safety ramps and ceilings; log stats
-
-Complexity control:
-
--   Use top-k edges per i (by W_ij pre-PHM) to keep O(E) manageable
-
--   Cache InRecvNN_j and OutProjNN_i per tick
-
--   Batch per NT across edges
-
-7) Integration with your DMN loop
----------------------------------
-
--   At 3.5 Binding/HC Expansion and 3.6 VS Valuation:
-
-    -   The μ distribution across areas influences retrieval weights, beam width/depth, safety thresholds.
-
-    -   PHM tries to shape μ so that candidate generation/valuation remains coherent and stable.
-
--   At 6.1 PFC-2 Selection:
-
-    -   If safety or coherence fails, emit negative reward to PHM/edges contributing to destabilizing μ.
-
--   At 9.1 World/Self-Model Update:
-
-    -   Provide ΔC, ΔH, ΔCal, safety_penalty, identity drift to PHM training buffers.
-
--   At Sleep/GC:
-
-    -   Run PHM consolidation: update critics, smooth s_ij^n priors, decay dead edges, re-center μ bands.
-
-8) Data structures and minimal shapes
--------------------------------------
-
--   OutProjNN_i: MLP([context_dim] → 128 → 128) for L_out_i; separate head for D_out_i: MLP([context_dim] → 64 → K)
-
--   InRecvNN_j: analogous (two heads)
-
--   EdgeGate_ij: tiny MLP([edge_meta_dim + global_ctx_dim] → 1), sigmoid
-
--   PHM_NN: MLP or transformer over tuple {i, j, edge, global} → per-NT vector length |NTs| + per-NT clamps
-
-Recommended defaults:
-
--   context_dim ~ 64--128
-
--   K (destination subfields) = 16--64
-
--   NT set size = 7 (DA, 5HT, NE, OXT, TST, HA, ORX)
-
--   Use layernorm and GELU; outputs bounded via sigmoid/tanh + scaling
-
-9) Safety and audit
--------------------
-
--   Hard floors: constitutional limits on μ and per-NT rates independent of PHM
-
--   Rate limiters and refractory periods per area/NT
-
--   Full trace:
-
-    -   For each transfer: {i, j, NT, W_ij, s_ij^n, ΔNT_ij^n, caps applied}
-
-    -   Downstream metrics: ΔC, safety events, calibration changes
-
--   Replay buffer for PHM with prioritized sampling on destabilizing events
-
-10) Pseudocode (simplified)
+7) Data Structures (Shapes)
 ---------------------------
+- μ: [num_areas, |NT|]
+- base_gain: [num_edges, |NT|] scalars
+- w: [num_edges, |NT|, feature_dim]; b: [num_edges, |NT|]
+- feature_dim (minimal) ≈ 5–10
+- influx: [num_areas, |NT|] zeroed each tick
 
--   compute_out(i): L_out_i, D_out_i = OutProjNN_i(x_i)
+8) Safety & Audit
+-----------------
+- Hard ceilings per area & NT (unalterable)
+- Max per-tick Δμ limit
+- Log per transfer: {edge_id, n, s, sent, μ_i_before, μ_j_after}
+- Flag if saturation (> upper_band + margin) persists > T ticks → auto reduce base_gain_ij^n
 
--   compute_in(j): L_in_j, D_in_j = InRecvNN_j(y_j)
+9) Initialization Heuristics
+----------------------------
+- Target bands: pick mid-range goals (e.g., 0.4–0.6 of normalized scale) per NT
+- s_max: 1.0 (or 2.0 if allowing amplification)
+- k_bind_j^n: small (0.1–0.3) to avoid sudden jumps
+- Learning rates: modulators fast (e.g., 1e-3), base_gain slow (1e-4)
 
--   compat(i,j): C = pool(sim(L_out_i, L_in_j)); R = dot(softmax(D_out_i), softmax(D_in_j)); g = EdgeGate_ij(...); return g*C*R
+10) Extension Hooks (Optional)
+------------------------------
+- Add small global context vector (coherence score, uncertainty) to features
+- Introduce per-area bias modulators (area-level scaling before per-edge)
+- Add simple decay: μ_i^n ← μ_i^n * (1 - decay_rate_n)
 
--   transfer(i,j,n):\
-    s = PHM(...)[n]; w = compat(i,j)\
-    raw = w*s\
-    return clamp(raw, 0, cap_edge_ij^n)
+11) Minimal Implementation Steps
+--------------------------------
+1. Define adjacency list with edges (i,j)
+2. Allocate parameter tensors (base_gain, w, b)
+3. Implement tick_projection() loop
+4. Collect metrics, compute R_t
+5. Backprop to modulators
+6. Periodically adjust target bands & prune
 
--   tick_projection():\
-    precompute all out/in\
-    for each n:\
-    for i: gather candidate j via top-k compat\
-    normalize per i\
-    apply transfers, bind at j, update μ with ramps/ceilings\
-    log and update PHM buffers
+This simplified design removes the complexity of latent matching while retaining adaptive, learnable control of neurotransmitter flow. It should be straightforward to implement incrementally and later expandable if richer routing becomes necessary.
 
-11) Training loop outline
--------------------------
-
--   Online:
-
-    -   Run DMN tick → compute metrics
-
-    -   PHM actor update from advantage (R_t vs baseline)
-
-    -   EdgeGate and Out/IN MLPs updated to reduce oscillations and improve predicted R_t
-
--   Offline/sleep:
-
-    -   Fit critics to predict R_t from s_ij^n, W_ij, contexts
-
-    -   Regularize: smoothness, sparsity, band utilization
-
-    -   Distill successful projection patterns into priors
-
-This design gives:
-
--   Encoded edges via NN fields that can flexibly route NTs
-
--   Explicit channel and anatomical subfield matching
-
--   A principled PHM that learns to stabilize cognition while enabling adaptive, task-sensitive neuromodulator distribution
-
--   Strong safeguards and audits to keep projections safe, interpretable, and trainable.
+(Original detailed architecture replaced by this simplified variant per request.)

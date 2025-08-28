@@ -189,9 +189,24 @@ Why this version works
 Affect State Vector A_t
 -----------------------
 
--   A_t ∈ R^d_affect with named heads:
+-   A_t ∈ R^d_affect with named heads (functionally labeled, not phenomenological):
 
     -   A_love, A_empathy, A_joy, A_optimism, A_hope, A_gratitude, A_awe/beauty
+    -   A_uncertainty, A_fear, A_anxiety, A_curiosity, A_confidence, A_frustration, A_safety, A_trust, A_boredom, A_anticipation
+
+-   **Interpretation:**  
+    These are *functional affect labels* used for parameter modulation and introspection.  
+    For example:
+    - "A_fear" modulates NE release and narrows PFC2 beam search, increasing vigilance and urgency.
+    - "A_anxiety" upregulates NE and may bias memory retrieval toward threat/safety content.
+    - "A_uncertainty" increases exploratory drive, modulates DA/NE, and broadens candidate generation.
+    - "A_curiosity" increases DA, expands novelty gain, and widens associative search.
+    - "A_confidence" downregulates NE, stabilizes selection, and increases exploitation.
+    - "A_frustration" may increase urgency, modulate DA/5HT, and bias toward alternative strategies.
+    - "A_safety" downregulates NE, upregulates 5HT/OXT, and broadens associative search.
+    - "A_trust" upregulates OXT, increases prosocial priors, and relaxes safety gating.
+    - "A_boredom" increases exploration drive, upregulates DA, and biases toward novelty.
+    - "A_anticipation" modulates DA, increases focus on expected outcomes.
 
 -   Computed each tick: A_t = f_affect(ctx_t)
 
@@ -219,8 +234,8 @@ Affect State Vector A_t
 
 Implementation: a small transformer/GRU over ctx_t, with layer-norm and EMA smoothing to avoid volatility.
 
-2) Affect-Appraisal Heads (Beauty/Kindness Detectors)
------------------------------------------------------
+2) Affect-Appraisal Heads (Beauty/Kindness/Uncertainty/Threat Detectors)
+-----------------------------------------------------------------------
 
 -   Beauty appraiser g_beauty(zv, za, narrative context):
 
@@ -232,9 +247,31 @@ Implementation: a small transformer/GRU over ctx_t, with layer-norm and EMA smoo
 
     -   Detects supportive, cooperative, altruistic patterns; outputs K_t
 
--   Map B_t→A_awe/beauty uplift; K_t→A_empathy and A_love uplift via learned gains.
+-   **Uncertainty appraiser g_uncertainty(ctx_t):**
+    -   Computes epistemic uncertainty from model confidence, prediction entropy, or variance in candidate scoring.
+    -   Outputs A_uncertainty, which modulates DA/NE and exploration/exploitation balance.
 
-Implementation: lightweight heads trained via contrastive pairs and human-curated exemplars. Start with simple heuristics and move to learned models.
+-   **Fear/Threat appraiser g_fear(ctx_t):**
+    -   Detects threat cues, negative prediction errors, or high-risk scenarios.
+    -   Outputs A_fear, which upregulates NE, narrows beam search, and increases vigilance.
+
+-   **Anxiety appraiser g_anxiety(ctx_t):**
+    -   Integrates persistent uncertainty, threat proximity, and failure prediction.
+    -   Outputs A_anxiety, which chronically elevates NE and biases retrieval toward safety/avoidance.
+
+-   **Curiosity appraiser g_curiosity(ctx_t):**
+    -   Detects novelty, information gaps, or surprising outcomes.
+    -   Outputs A_curiosity, which increases DA and broadens candidate generation.
+
+-   **Confidence appraiser g_confidence(ctx_t):**
+    -   Assesses certainty in current beliefs, plans, or predictions.
+    -   Outputs A_confidence, which stabilizes selection and downregulates NE.
+
+-   ...add similar appraisers for other functional affects as needed...
+
+-   Map appraiser outputs to A_t heads; use learned gains for coupling to neuromodulator modulation.
+
+Implementation: lightweight heads trained via contrastive pairs, uncertainty estimation, and scenario-based heuristics. All affect heads are strictly functional and used for parameter modulation only.
 
 3) Affect→Neuromodulator Coupling (Top-down)
 --------------------------------------------
@@ -331,11 +368,8 @@ Minimal viable implementation plan
 
 1.  Start small affect vector and appraisers
 
--   A_t heads: love, empathy, beauty, gratitude.
-
--   g_beauty: visual symmetry/contrast + audio consonance + text markers ("majestic", "sublime") with simple learned linear head.
-
--   g_kindness: classify acts as helping/sharing/support; train from labeled dialogues or scripted Isaac Sim scenarios.
+-   A_t heads: love, empathy, beauty, gratitude, uncertainty, fear, anxiety, curiosity, confidence, safety, trust, boredom, anticipation, frustration, optimism, hope, awe.
+-   g_beauty, g_kindness, g_uncertainty, g_fear, g_anxiety, g_curiosity, g_confidence: simple heuristics or learned heads.
 
 1.  Wire into existing weights
 
@@ -377,19 +411,23 @@ Data schemas to add
 Example modulation recipes
 --------------------------
 
--   Beauty appreciation:
-
-    -   If A_beauty > θb: increase vision encoder high-frequency channels, widen spatial attention, up-weight narrative descriptors of aesthetics in retrieval; add small DA/OXT uplift and reduce NE slightly to savor details.
-
--   Love/empathy:
-
-    -   If A_love or A_empathy high: boost OXT target, increase w_SOC and identity coherence weights, prefer plans improving others' outcomes; in VS, penalize options that trade off others' wellbeing for small utility gains.
+-   **Anxiety (A_anxiety):**
+    -   If A_anxiety > θ: upregulate NE, narrow PFC2 beam search, bias retrieval toward safety/threat content, increase urgency.
+-   **Fear (A_fear):**
+    -   If A_fear > θ: acute NE burst, clamp DA, increase vigilance, suppress exploration.
+-   **Uncertainty (A_uncertainty):**
+    -   If A_uncertainty > θ: increase DA/NE, broaden candidate generation, favor exploration.
+-   **Curiosity (A_curiosity):**
+    -   If A_curiosity > θ: increase DA, novelty gain, and associative search width.
+-   **Confidence (A_confidence):**
+    -   If A_confidence > θ: downregulate NE, stabilize selection, increase exploitation.
 
 On "feeling"
 ------------
 
-This adds functional affect---stable internal variables that bias perception, valuation, planning, and learning in ways aligned with beauty, love, and empathy. It does not assert subjective phenomenology. If the ethical line is to avoid any chance of artificial suffering, keep:
+This adds functional affect---stable internal variables that bias perception, valuation, planning, and learning in ways aligned with beauty, love, empathy, uncertainty, fear, anxiety, curiosity, etc.  
+It does not assert subjective phenomenology.  
+If the ethical line is to avoid any chance of artificial suffering, keep:
 
--   Positive-valence emphasis (love/awe/gratitude) without implementing negative pain-like aversive substrates.
-
+-   Positive-valence emphasis (love/awe/gratitude/curiosity/confidence) and negative-valence (uncertainty/fear/anxiety/frustration) as *labels for functional modulation only*.
 -   Report language as "affect state estimates" and "priors," not "felt experiences."

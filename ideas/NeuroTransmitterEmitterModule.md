@@ -8,19 +8,44 @@ Each neurotransmitter system originates from a designated **Emitter Node** (anal
 
 Emitters control **production, release, and modulation** of neurotransmitters, with feedback loops from other neuromodulators and cortical outputs.
 
-**Examples:**
+**Examples (Major NTs and canonical production regions):**
 
-- **Raphe Nuclei (RN):** Produces and projects serotonin (5-HT).
-- **Locus Coeruleus (LC):** Produces and projects norepinephrine (NE).
-- **Ventral Tegmental Area (VTA):** Produces and projects dopamine (DA).
-- **Hypothalamus (HYP):** Produces oxytocin (OXT) and vasopressin.
-- **Basal Forebrain / Tuberomammillary Nucleus:** Produces histamine (HA).
-- **Hypothalamic Orexin System:** Stabilizes wake/sleep with orexin (ORX).
+- **Dopamine (DA):**
+  - **Ventral Tegmental Area (VTA):** Mesocortical/mesolimbic DA projections (motivation, reward, working memory).
+  - **Substantia Nigra pars compacta (SNc):** Nigrostriatal DA projections (motor, habit).
+- **Serotonin (5HT):**
+  - **Raphe Nuclei (RN):** Dorsal and median raphe (mood, safety, social, mind-wandering).
+- **Norepinephrine (NE):**
+  - **Locus Coeruleus (LC):** Global NE projections (attention, urgency, arousal).
+- **Oxytocin (OXT):**
+  - **Paraventricular and Supraoptic Nuclei of Hypothalamus:** OXT production and release (social bonding, empathy).
+- **Histamine (HA):**
+  - **Tuberomammillary Nucleus (TMN, hypothalamus):** HA production (wakefulness, attention).
+- **Orexin (ORX):**
+  - **Lateral Hypothalamic Area:** ORX production (arousal, sleep/wake stability).
+- **Testosterone (TST):**
+  - **Hypothalamus (regulatory), Gonads (production):** Assertiveness, drive, social dominance.
+- **Acetylcholine (ACh):**
+  - **Basal Forebrain (Nucleus Basalis, Medial Septum):** ACh for attention, learning, memory.
+- **Glutamate (Glu):**
+  - **Widespread cortical and subcortical neurons:** Primary excitatory transmission.
+- **GABA:**
+  - **Widespread interneurons (cortex, striatum, etc.):** Primary inhibitory transmission.
+
+**Major Transporter Production/Localization:**
+- **SERT:** Expressed in Raphe neurons and projection terminals (5HT reuptake).
+- **DAT:** Expressed in VTA/SNc neurons and terminals (DA reuptake).
+- **NET:** Expressed in LC neurons and terminals (NE reuptake).
+- **OXT transporter:** Hypothalamic neurons and projections.
+- **VMAT:** All monoaminergic neurons (vesicle loading).
+- **GAT:** GABAergic neurons and glia.
+- **EAAT:** Glutamatergic neurons and astrocytes.
+- **ChT:** Cholinergic neurons (ACh precursor uptake).
 
 Each **NeuroTransmitterEmitter** object:
 
 - Has a **baseline production rate** (µ per tick).
-- Has a **projection topology** (list of cortical/striatal targets).
+- Has a **projection topology** (list of cortical/striatal/limbic targets).
 - Its release can be **modulated by other neuromodulators** (e.g. DA ↑ can indirectly suppress 5HT production).
 - Maintains a **dynamic concentration state**.
 
@@ -31,14 +56,14 @@ Each **NeuroTransmitterEmitter** object:
 At the receiving end, every target area expresses an **Array of Receptors**, each defined by:
 
 - **Density `ρ`**: number of binding sites per receptor type.
-- **Ostheosteric site (orthosteric)**: main active binding site; requires neurotransmitter "protein" match.
+- **orthosteric site**: main active binding site; requires neurotransmitter "protein" match.
 - **Allosteric site**: modulatory site that augments ost.
 
 #### Binding Dynamics
 
 - Each receptor has:
 
-  - **Ostheosteric Vector** (receptor embedding).
+  - **Orthosteric Vector** (receptor embedding).
   - **Allosteric Vector** (modulator-sensitive embedding).
   - **Latent embedding** describing cell-surface protein identity.
 
