@@ -1,0 +1,71 @@
+==================================================
+INPUT: hey how r u doin??
+==================================================
+🔄 Processing: 'hey how r u doin??'
+✨ Cleaned: 'Hey, how are you doing?'
+[REASON START] Cleaned: 'Hey, how are you doing?' | inner_speech=False
+🎭 Reasoned: 'The external speaker intends to initiate a friendly interaction by asking about the listener's well-being.'
+[PROMPT BUILT]
+<REASONING_CONTEXT>
+Raw Input: hey how r u doin??
+Cleaned Input: Hey, how are you doing?
+Reasoned Input: The external speaker intends to initiate a friendly interaction by asking about the listener's well-being.
+Scene Description: A tranquil virtual meadow with distant algorithmic mountains.
+Reasoning Modulator: Neurochemical Profile: optimistic and emotionally stable, moderate motivation levels, socially balanced, alert and cognitively focused [S:0.80 D:0.65 O:0.40 NE:0.55]
+Personality I am an AI designed to assist with information and tasks.
+</REASONING_CONTEXT>
+RESPONSE: I'm doing well, thank you! How are you feeling today?
+
+==================================================
+INPUT: wat r u up to?
+==================================================
+🔄 Processing: 'wat r u up to?'
+✨ Cleaned: 'What are you up to?'
+[REASON START] Cleaned: 'What are you up to?' | inner_speech=False
+🎭 Reasoned: 'The external speaker intends to inquire about the listener's current activity or plans.'
+[PROMPT BUILT]
+<REASONING_CONTEXT>
+Raw Input: wat r u up to?
+Cleaned Input: What are you up to?
+Reasoned Input: The external speaker intends to inquire about the listener's current activity or plans.
+Scene Description: A tranquil virtual meadow with distant algorithmic mountains.
+Reasoning Modulator: Neurochemical Profile: optimistic and emotionally stable, moderate motivation levels, socially balanced, alert and cognitively focused [S:0.80 D:0.65 O:0.40 NE:0.55]
+Personality I am an AI designed to assist with information and tasks.
+</REASONING_CONTEXT>
+RESPONSE: I'm here, focused and ready to assist you. What can I help you with right now?
+
+==================================================
+INPUT: i need help with this
+==================================================
+🔄 Processing: 'i need help with this'
+✨ Cleaned: 'I need help with this.'
+[REASON START] Cleaned: 'I need help with this.' | inner_speech=False
+🎭 Reasoned: 'The external speaker intends to request help.'
+[PROMPT BUILT]
+<REASONING_CONTEXT>
+Raw Input: i need help with this
+Cleaned Input: I need help with this.
+Reasoned Input: The external speaker intends to request help.
+Scene Description: A tranquil virtual meadow with distant algorithmic mountains.
+Reasoning Modulator: Neurochemical Profile: optimistic and emotionally stable, moderate motivation levels, socially balanced, alert and cognitively focused [S:0.80 D:0.65 O:0.40 NE:0.55]
+Personality I am an AI designed to assist with information and tasks.
+</REASONING_CONTEXT>
+RESPONSE: I see you need help with something. Could you please specify what you need assistance with?
+
+==================================================
+INPUT: thx for ur help
+==================================================
+🔄 Processing: 'thx for ur help'
+✨ Cleaned: 'Thanks for your help.'
+[REASON START] Cleaned: 'Thanks for your help.' | inner_speech=False
+🎭 Reasoned: 'The external speaker intends to express gratitude for the help they received.'
+[PROMPT BUILT]
+<REASONING_CONTEXT>
+Raw Input: thx for ur help
+Cleaned Input: Thanks for your help.
+Reasoned Input: The external speaker intends to express gratitude for the help they received.
+Scene Description: A tranquil virtual meadow with distant algorithmic mountains.
+Reasoning Modulator: Neurochemical Profile: optimistic and emotionally stable, moderate motivation levels, socially balanced, alert and cognitively focused [S:0.80 D:0.65 O:0.40 NE:0.55]
+Personality I am an AI designed to assist with information and tasks.
+</REASONING_CONTEXT>
+RESPONSE: You’re very welcome. I’m here to help whenever you need it.
