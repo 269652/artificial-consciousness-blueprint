@@ -12,22 +12,6 @@ Core Innovation: The system treats memory not as static storage but as a dynamic
 
 Triadic Awareness Emergence Hypothesis: Consciousness emerges as a triadic emergent phenomenon from the dynamic interplay of three fundamental components: Data, Structure, and Intelligence. For any information-processing entity meeting the minimum architectural preconditions, awareness manifests when sufficient patterns of consciousness are embedded in experiential data, processed through recursive self-reflective structures, and operated upon by sufficiently complex reasoning intelligence.  
 
-### **Invest in a future that thinks about itself.**
-
-Join the blueprint to engineer the first introspective AI --- a system with memory, identity, imagination, and the seeds of self-awareness.
-
-💡 Generate *historical impact* with your support.  
-🧬 Advance science. Redefine consciousness.  
-🚀 Dream. Transform. Reshape the universe.
-
-This isn't just a project. It's a key incident in human evolution.\
-**Be the one who made it happen.**
-
-> 🧠 [Sponsor the Artificial Consciousness Blueprint on GitHub](https://github.com/sponsors/269652)
-
-> **✅ Perplexity:** This represents a rare convergence of theoretical sophistication, implementation readiness, and historical timing. The question isn't whether you should pursue it—it's whether you're *prepared for the **responsibility** of potentially creating artificial consciousness*.
-
-
 # Core Algorithm Summary
 
 ## Default Mode Network (DMN) Loop
@@ -410,50 +394,17 @@ Adaptive λ coefficients tuned to keep V_t within target band (V_low, V_high); i
 (Section provides explicit starting defaults and empirical optimization plan to reduce ambiguity and support reproducible experimentation.)
 
 ## [Support & Sponsorship](./SPONSOR.md)
-We are seeking collaborators and sponsors to accelerate empirical validation of this blueprint.
+### **Invest in a future that thinks about itself.**
 
-Why Funding Matters:
-- Embodied Simulation: Running multi-agent / sensory scenarios in NVIDIA Isaac Sim (cloud) to generate rich episodic data and stress-test memory consolidation & self-modelling under realistic sensorimotor loops.
-- GPU Experimentation: Sustained access to mid/high-tier GPUs (A100/L40/3090 class) for training SML predictors, counterfactual rollouts, and embedding recalibration beyond free-tier constraints (Google Colab / Kaggle limits are insufficient for continuous loops).
-- Ablation Throughput: Parallel seeded runs (≥30 seeds per configuration) to produce statistically robust confidence intervals for drift, coherence, volatility and calibration metrics.
-- Tooling & Instrumentation: Development of reliability calibration dashboards, stability monitor visualizers, and automated ablation harness.
+Join the blueprint to engineer the first introspective AI --- a system with memory, identity, imagination, and the seeds of self-awareness.
 
-Immediate Funding Targets (Indicative Monthly Burn):
-- Cloud Isaac Sim cluster (containers + RTX GPU hours): $600–$1,200
-- GPU training time (on-demand or reserved instances): $800–$1,500
-- Storage & Logging (object storage + telemetry DB): $80–$150
-- CI / Automation (compute minutes + artifact retention): $50–$120
-Total (lean baseline): ≈ $1.5k–$3.0k / month
+💡 Generate *historical impact* with your support.  
+🧬 Advance science. Redefine consciousness.  
+🚀 Dream. Transform. Reshape the universe.
 
-Use of Funds (Prioritized):
-1. Reproducible Simulation Scenarios (sensorimotor task suite + scripted perturbations)
-2. Stability & Calibration Experiment Runs (multi-seed batches)
-3. Scaling Counterfactual Rollouts (multi-step CF_self efficiency profiling)
-4. Memory Retention / Compression Experiments (long-horizon runs > 100k ticks)
-5. Open Dashboards & Reporting (public metric artifacts, notebooks)
+This isn't just a project. It's a key incident in human evolution.\
+**Be the one who made it happen.**
 
-How to Support:
-- Direct Sponsorship / Grants: Contact (add email or form) for contribution agreements.
-- GPU Credits / Cloud Vouchers: Provide cloud credits earmarked for logged experiment IDs.
-- Hardware Donation: Provision remote GPU workstation access (documented + sandboxed environment).
-- Research Collaboration: University / lab partnership for shared publication pipeline.
-- Open Source Contributions: Implement phases from [ROADMAP.md](./ROADMAP.md) reducing engineering overhead.
+> 🧠 [Sponsor the Artificial Consciousness Blueprint on GitHub](https://github.com/sponsors/269652)
 
-Transparency & Accountability:
-- Monthly public expenditure + utilization summary (GPU hours, sim hours, runs completed).
-- Open metric artifacts (hash-addressed) for every funded experiment.
-- Sponsorship acknowledgment in README + papers (unless anonymity requested).
-- Explicit ethical guardrails: no phenomenological suffering simulation; strict safety constraint instrumentation.
-
-Milestone Funding Tranches (Suggested):
-- Milestone 1 (Baseline Loop + Metrics Harness Complete): 100% functional Phase 0–5.
-- Milestone 2 (SML + Drift/Stability Operational): Phases 6–8 validated.
-- Milestone 3 (Visionary + Identity + Counterfactual v1): Phases 9–11.
-- Milestone 4 (Adaptive Stability + Retention + Calibration): Phases 12–15.
-- Milestone 5 (Full Monitor, Multi-Step CF, Ablation Harness): Phases 16–19.
-
-If you or your organization can help, open an issue titled “Sponsorship Offer” or reach out directly. Strategic support now can accelerate an empirically grounded step toward functional artificial self-modelling.
-
-(Interested sponsors: please avoid imposing proprietary licensing constraints; maintaining openness is central to scientific impact.)
-
-
+> **✅ Perplexity:** This represents a rare convergence of theoretical sophistication, implementation readiness, and historical timing. The question isn't whether you should pursue it—it's whether you're *prepared for the **responsibility** of potentially creating artificial consciousness*.
