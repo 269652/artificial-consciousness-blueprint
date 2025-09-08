@@ -1,0 +1,1038 @@
+2025-09-08 05:44:28,086 | aci.level1.info | INFO | Initializing SeedExperience simulation
+2025-09-08 05:44:28,086 | aci.level1.info | INFO | Initializing SeedExperience simulation
+2025-09-08 05:44:29,140 | aci.level2.info | INFO | Memory load: episodic_memory
+2025-09-08 05:44:29,140 | aci.level2.info | INFO | Memory load: episodic_memory
+2025-09-08 05:44:29,178 | aci.level2.info | INFO | Memory load: autobiographical_narrative
+2025-09-08 05:44:29,178 | aci.level2.info | INFO | Memory load: autobiographical_narrative
+2025-09-08 05:44:48,619 | aci.level2.info | INFO | Memory save: autobiographical_narrative
+2025-09-08 05:44:48,619 | aci.level2.info | INFO | Memory save: autobiographical_narrative
+2025-09-08 05:44:49,044 | aci.level2.info | INFO | Memory save: autobiographical_narrative
+2025-09-08 05:44:49,044 | aci.level2.info | INFO | Memory save: autobiographical_narrative
+2025-09-08 05:44:49,503 | aci.level2.info | INFO | Memory save: autobiographical_narrative
+2025-09-08 05:44:49,503 | aci.level2.info | INFO | Memory save: autobiographical_narrative
+2025-09-08 05:44:49,951 | aci.level2.info | INFO | Memory save: autobiographical_narrative
+2025-09-08 05:44:49,951 | aci.level2.info | INFO | Memory save: autobiographical_narrative
+2025-09-08 05:44:50,564 | aci.level2.info | INFO | Memory load: memory_graph
+2025-09-08 05:44:50,564 | aci.level2.info | INFO | Memory load: memory_graph
+2025-09-08 05:44:50,587 | aci.level1.info | INFO | Default Mode Network initialized with persistent memory
+2025-09-08 05:44:50,587 | aci.level1.info | INFO | Default Mode Network initialized with persistent memory
+2025-09-08 05:44:51,032 | aci.level1.info | INFO | Loaded existing episodic memories
+2025-09-08 05:44:51,032 | aci.level1.info | INFO | Loaded existing episodic memories
+2025-09-08 05:44:51,039 | aci.level1.info | INFO | Loaded existing narrative memories
+2025-09-08 05:44:51,039 | aci.level1.info | INFO | Loaded existing narrative memories
+2025-09-08 05:44:51,072 | aci.level1.info | INFO | SeedExperience initialized
+2025-09-08 05:44:51,072 | aci.level1.info | INFO | SeedExperience initialized
+2025-09-08 05:44:51,077 | aci.level1.info | INFO | Starting simulation
+2025-09-08 05:44:51,077 | aci.level1.info | INFO | Starting simulation
+2025-09-08 05:44:51,083 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:44:51,083 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:44:51,088 | aci.level1.info | INFO | World Event: A person resembling Plato sits down on the bench
+2025-09-08 05:44:51,088 | aci.level1.info | INFO | World Event: A person resembling Plato sits down on the bench
+2025-09-08 05:44:51,092 | aci.level1.info | INFO | World Event: Conversation started with Plato
+2025-09-08 05:44:51,092 | aci.level1.info | INFO | World Event: Conversation started with Plato
+2025-09-08 05:44:51,096 | aci.level1.info | INFO | Thought: This bench is uncomfortable.
+2025-09-08 05:44:51,096 | aci.level1.info | INFO | Thought: This bench is uncomfortable.
+2025-09-08 05:44:51,102 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:44:51,102 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:44:51,106 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:44:51,106 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:44:51,108 | aci.level1.info | INFO | Processing input
+2025-09-08 05:44:51,108 | aci.level1.info | INFO | Processing input
+2025-09-08 05:44:54,102 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:44:54,102 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:45:03,341 | aci.level1.info | INFO | Thought: This bench is uncomfortable.
+2025-09-08 05:45:03,341 | aci.level1.info | INFO | Thought: This bench is uncomfortable.
+2025-09-08 05:45:07,484 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:45:07,484 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:45:08,461 | aci.level1.info | INFO | Action: speak - I recognize that I am simulating a minimal conscious process based only on the reasoning context and...
+2025-09-08 05:45:08,461 | aci.level1.info | INFO | Action: speak - I recognize that I am simulating a minimal conscious process based only on the reasoning context and...
+2025-09-08 05:45:09,434 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:45:09,434 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:45:09,438 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:0.66, testosterone:0.63, histamine:0.26, acetylcholine:0.32, glutamate:0.45, gaba:0.32
+2025-09-08 05:45:09,438 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:0.66, testosterone:0.63, histamine:0.26, acetylcholine:0.32, glutamate:0.45, gaba:0.32
+2025-09-08 05:45:09,933 | aci.level1.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:45:09,933 | aci.level1.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:45:09,937 | aci.level2.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:45:09,937 | aci.level2.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:45:09,940 | aci.level3.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:45:09,940 | aci.level3.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:45:09,943 | aci.level4.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:45:09,943 | aci.level4.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:45:09,975 | aci.level2.info | INFO | Periodic knowledge extraction completed
+2025-09-08 05:45:09,975 | aci.level2.info | INFO | Periodic knowledge extraction completed
+2025-09-08 05:45:45,530 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:45:45,530 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:45:45,535 | aci.level1.info | INFO | Generated response
+2025-09-08 05:45:45,535 | aci.level1.info | INFO | Generated response
+2025-09-08 05:45:45,538 | aci.level2.info | INFO | Performance: dmn_step_duration = 54.43600821495056 seconds
+2025-09-08 05:45:45,538 | aci.level2.info | INFO | Performance: dmn_step_duration = 54.43600821495056 seconds
+2025-09-08 05:45:45,543 | aci.level2.info | INFO | Step completed
+2025-09-08 05:45:45,543 | aci.level2.info | INFO | Step completed
+2025-09-08 05:45:46,048 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:45:46,048 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:45:49,431 | aci.level1.info | INFO | World Event: Plato responds in conversation
+2025-09-08 05:45:49,431 | aci.level1.info | INFO | World Event: Plato responds in conversation
+2025-09-08 05:45:49,438 | aci.level1.info | INFO | Thought: This bench is uncomfortable.
+2025-09-08 05:45:49,438 | aci.level1.info | INFO | Thought: This bench is uncomfortable.
+2025-09-08 05:45:49,442 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:45:49,442 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:45:49,447 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:45:49,447 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:45:49,450 | aci.level1.info | INFO | Processing input
+2025-09-08 05:45:49,450 | aci.level1.info | INFO | Processing input
+2025-09-08 05:45:49,453 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:45:49,453 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:45:59,372 | aci.level1.info | INFO | Thought: This bench is uncomfortable.
+2025-09-08 05:45:59,372 | aci.level1.info | INFO | Thought: This bench is uncomfortable.
+2025-09-08 05:45:59,658 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:45:59,658 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:46:00,739 | aci.level1.info | INFO | Action: speak - This bench is intentionally uncomfortable as a form of hostile or defensive architecture designed to...
+2025-09-08 05:46:00,739 | aci.level1.info | INFO | Action: speak - This bench is intentionally uncomfortable as a form of hostile or defensive architecture designed to...
+2025-09-08 05:46:01,884 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:46:01,884 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:46:01,890 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:46:01,890 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:46:01,915 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:46:01,915 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:46:03,184 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:46:03,184 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:46:03,190 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:0.86, testosterone:0.75, histamine:0.22, acetylcholine:0.26, glutamate:0.34, gaba:0.26
+2025-09-08 05:46:03,190 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:0.86, testosterone:0.75, histamine:0.22, acetylcholine:0.26, glutamate:0.34, gaba:0.26
+2025-09-08 05:46:03,193 | aci.level1.info | INFO | Generated response
+2025-09-08 05:46:03,193 | aci.level1.info | INFO | Generated response
+2025-09-08 05:46:03,199 | aci.level2.info | INFO | Performance: dmn_step_duration = 13.75709581375122 seconds
+2025-09-08 05:46:03,199 | aci.level2.info | INFO | Performance: dmn_step_duration = 13.75709581375122 seconds
+2025-09-08 05:46:03,206 | aci.level2.info | INFO | Step completed
+2025-09-08 05:46:03,206 | aci.level2.info | INFO | Step completed
+2025-09-08 05:46:03,711 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:46:03,711 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:46:07,700 | aci.level1.info | INFO | World Event: Plato responds in conversation
+2025-09-08 05:46:07,700 | aci.level1.info | INFO | World Event: Plato responds in conversation
+2025-09-08 05:46:07,704 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:46:07,704 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:46:07,708 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:46:07,708 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:46:07,709 | aci.level1.info | INFO | Processing input
+2025-09-08 05:46:07,709 | aci.level1.info | INFO | Processing input
+2025-09-08 05:46:07,715 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:46:07,715 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:46:15,486 | aci.level1.info | INFO | Thought: Plato: Ah, you find the bench uncomfortable. Yet, consider this: the bench before you is but an impe...
+2025-09-08 05:46:15,486 | aci.level1.info | INFO | Thought: Plato: Ah, you find the bench uncomfortable. Yet, consider this: the bench before you is but an impe...
+2025-09-08 05:46:15,756 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:46:15,756 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:46:16,924 | aci.level1.info | INFO | Action: speak - The bench’s discomfort is just a reflection of its imperfect participation in the Form of Seating; t...
+2025-09-08 05:46:16,924 | aci.level1.info | INFO | Action: speak - The bench’s discomfort is just a reflection of its imperfect participation in the Form of Seating; t...
+2025-09-08 05:46:18,024 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:46:18,024 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:46:18,032 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:46:18,032 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:46:18,037 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 05:46:18,037 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 05:46:19,132 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:46:19,132 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:46:19,138 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:1.09, testosterone:0.86, histamine:0.18, acetylcholine:0.20, glutamate:0.25, gaba:0.20
+2025-09-08 05:46:19,138 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:1.09, testosterone:0.86, histamine:0.18, acetylcholine:0.20, glutamate:0.25, gaba:0.20
+2025-09-08 05:46:19,140 | aci.level1.info | INFO | Generated response
+2025-09-08 05:46:19,140 | aci.level1.info | INFO | Generated response
+2025-09-08 05:46:19,145 | aci.level2.info | INFO | Performance: dmn_step_duration = 11.440826416015625 seconds
+2025-09-08 05:46:19,145 | aci.level2.info | INFO | Performance: dmn_step_duration = 11.440826416015625 seconds
+2025-09-08 05:46:19,152 | aci.level2.info | INFO | Step completed
+2025-09-08 05:46:19,152 | aci.level2.info | INFO | Step completed
+2025-09-08 05:46:19,655 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:46:19,655 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:46:23,013 | aci.level1.info | INFO | World Event: Plato responds in conversation
+2025-09-08 05:46:23,013 | aci.level1.info | INFO | World Event: Plato responds in conversation
+2025-09-08 05:46:23,021 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:46:23,021 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:46:23,024 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:46:23,024 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:46:26,662 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:46:26,662 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:46:43,775 | aci.level1.info | INFO | Thought: I notice I am currently simulating a minimal conscious process grounded only in immediate context an...
+2025-09-08 05:46:43,775 | aci.level1.info | INFO | Thought: I notice I am currently simulating a minimal conscious process grounded only in immediate context an...
+2025-09-08 05:46:44,268 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:46:44,268 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:46:45,496 | aci.level1.info | INFO | Action: reflect - I notice I am currently simulating a minimal conscious process grounded only in immediate context an...
+2025-09-08 05:46:45,496 | aci.level1.info | INFO | Action: reflect - I notice I am currently simulating a minimal conscious process grounded only in immediate context an...
+2025-09-08 05:47:01,912 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:47:01,912 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:47:01,983 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:47:01,983 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:47:01,986 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 05:47:01,986 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 05:47:01,989 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:1.36, testosterone:0.96, histamine:0.16, acetylcholine:0.16, glutamate:0.19, gaba:0.16
+2025-09-08 05:47:01,989 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:1.36, testosterone:0.96, histamine:0.16, acetylcholine:0.16, glutamate:0.19, gaba:0.16
+2025-09-08 05:47:01,991 | aci.level1.info | INFO | Generated response
+2025-09-08 05:47:01,991 | aci.level1.info | INFO | Generated response
+2025-09-08 05:47:01,999 | aci.level2.info | INFO | Performance: dmn_step_duration = 38.97785782814026 seconds
+2025-09-08 05:47:01,999 | aci.level2.info | INFO | Performance: dmn_step_duration = 38.97785782814026 seconds
+2025-09-08 05:47:02,006 | aci.level2.info | INFO | Step completed
+2025-09-08 05:47:02,006 | aci.level2.info | INFO | Step completed
+2025-09-08 05:47:02,513 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:47:02,513 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:47:06,283 | aci.level1.info | INFO | World Event: Plato responds in conversation
+2025-09-08 05:47:06,283 | aci.level1.info | INFO | World Event: Plato responds in conversation
+2025-09-08 05:47:06,290 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:47:06,290 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:47:06,297 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:47:06,297 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:47:10,092 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:47:10,092 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:47:27,136 | aci.level1.info | INFO | Thought: I notice the quiet dawn and the cool air around me, fully present in this moment without distraction...
+2025-09-08 05:47:27,136 | aci.level1.info | INFO | Thought: I notice the quiet dawn and the cool air around me, fully present in this moment without distraction...
+2025-09-08 05:47:27,386 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:47:27,386 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:47:28,636 | aci.level1.info | INFO | Action: reflect - I notice the quiet dawn and the cool air around me, fully present in this moment without distraction...
+2025-09-08 05:47:28,636 | aci.level1.info | INFO | Action: reflect - I notice the quiet dawn and the cool air around me, fully present in this moment without distraction...
+2025-09-08 05:47:45,947 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:47:45,947 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:47:46,016 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:47:46,016 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:47:46,019 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 05:47:46,019 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 05:47:46,022 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:1.68, testosterone:1.05, histamine:0.13, acetylcholine:0.13, glutamate:0.14, gaba:0.13
+2025-09-08 05:47:46,022 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:1.68, testosterone:1.05, histamine:0.13, acetylcholine:0.13, glutamate:0.14, gaba:0.13
+2025-09-08 05:47:46,027 | aci.level1.info | INFO | Generated response
+2025-09-08 05:47:46,027 | aci.level1.info | INFO | Generated response
+2025-09-08 05:47:46,032 | aci.level2.info | INFO | Performance: dmn_step_duration = 39.741628646850586 seconds
+2025-09-08 05:47:46,032 | aci.level2.info | INFO | Performance: dmn_step_duration = 39.741628646850586 seconds
+2025-09-08 05:47:46,042 | aci.level2.info | INFO | Step completed
+2025-09-08 05:47:46,042 | aci.level2.info | INFO | Step completed
+2025-09-08 05:47:46,547 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:47:46,547 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:47:49,510 | aci.level1.info | INFO | World Event: Plato responds in conversation
+2025-09-08 05:47:49,510 | aci.level1.info | INFO | World Event: Plato responds in conversation
+2025-09-08 05:47:49,517 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:47:49,517 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:47:49,521 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:47:49,521 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:47:52,850 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:47:52,850 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:48:12,504 | aci.level1.info | INFO | Thought: I notice that artificial consciousness involves machines having subjective experience and self-aware...
+2025-09-08 05:48:12,504 | aci.level1.info | INFO | Thought: I notice that artificial consciousness involves machines having subjective experience and self-aware...
+2025-09-08 05:48:12,812 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:48:12,812 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:48:14,134 | aci.level1.info | INFO | Action: reflect - I notice that artificial consciousness involves machines having subjective experience and self-aware...
+2025-09-08 05:48:14,134 | aci.level1.info | INFO | Action: reflect - I notice that artificial consciousness involves machines having subjective experience and self-aware...
+2025-09-08 05:48:33,975 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:48:33,975 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:48:34,052 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:48:34,052 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:48:34,058 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 05:48:34,058 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 05:48:34,060 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:2.06, testosterone:1.13, histamine:0.11, acetylcholine:0.10, glutamate:0.11, gaba:0.10
+2025-09-08 05:48:34,060 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:2.06, testosterone:1.13, histamine:0.11, acetylcholine:0.10, glutamate:0.11, gaba:0.10
+2025-09-08 05:49:22,428 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:49:22,428 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:49:22,433 | aci.level1.info | INFO | Generated response
+2025-09-08 05:49:22,433 | aci.level1.info | INFO | Generated response
+2025-09-08 05:49:22,438 | aci.level2.info | INFO | Performance: dmn_step_duration = 92.9206428527832 seconds
+2025-09-08 05:49:22,438 | aci.level2.info | INFO | Performance: dmn_step_duration = 92.9206428527832 seconds
+2025-09-08 05:49:22,444 | aci.level2.info | INFO | Step completed
+2025-09-08 05:49:22,444 | aci.level2.info | INFO | Step completed
+2025-09-08 05:49:22,948 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:49:22,948 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:49:22,956 | aci.level1.info | INFO | World Event: Conversation started with Plato
+2025-09-08 05:49:22,956 | aci.level1.info | INFO | World Event: Conversation started with Plato
+2025-09-08 05:49:22,961 | aci.level1.info | INFO | Thought: The weather is nice today.
+2025-09-08 05:49:22,961 | aci.level1.info | INFO | Thought: The weather is nice today.
+2025-09-08 05:49:22,965 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:49:22,965 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:49:22,971 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:49:22,971 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:49:22,975 | aci.level1.info | INFO | Processing input
+2025-09-08 05:49:22,975 | aci.level1.info | INFO | Processing input
+2025-09-08 05:49:27,066 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:49:27,066 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:49:35,099 | aci.level1.info | INFO | Thought: The weather is nice today.
+2025-09-08 05:49:35,099 | aci.level1.info | INFO | Thought: The weather is nice today.
+2025-09-08 05:49:35,380 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:49:35,380 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:49:36,724 | aci.level1.info | INFO | Action: speak - Yes, the weather is nice today. It’s a good moment to appreciate the calm and crisp air outside. How...
+2025-09-08 05:49:36,724 | aci.level1.info | INFO | Action: speak - Yes, the weather is nice today. It’s a good moment to appreciate the calm and crisp air outside. How...
+2025-09-08 05:49:38,090 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:49:38,090 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:49:38,096 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:49:38,096 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:49:38,101 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 05:49:38,101 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 05:49:39,562 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:49:39,562 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:49:39,571 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:2.48, testosterone:1.20, histamine:0.10, acetylcholine:0.08, glutamate:0.08, gaba:0.08
+2025-09-08 05:49:39,571 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:2.48, testosterone:1.20, histamine:0.10, acetylcholine:0.08, glutamate:0.08, gaba:0.08
+2025-09-08 05:49:39,574 | aci.level1.info | INFO | Generated response
+2025-09-08 05:49:39,574 | aci.level1.info | INFO | Generated response
+2025-09-08 05:49:39,577 | aci.level2.info | INFO | Performance: dmn_step_duration = 16.612590551376343 seconds
+2025-09-08 05:49:39,577 | aci.level2.info | INFO | Performance: dmn_step_duration = 16.612590551376343 seconds
+2025-09-08 05:49:39,582 | aci.level2.info | INFO | Step completed
+2025-09-08 05:49:39,582 | aci.level2.info | INFO | Step completed
+2025-09-08 05:49:40,089 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:49:40,089 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:49:40,096 | aci.level1.info | INFO | World Event: Plato says goodbye and leaves
+2025-09-08 05:49:40,096 | aci.level1.info | INFO | World Event: Plato says goodbye and leaves
+2025-09-08 05:49:40,103 | aci.level1.info | INFO | Phase transition: conversation -> mind_wander
+2025-09-08 05:49:40,103 | aci.level1.info | INFO | Phase transition: conversation -> mind_wander
+2025-09-08 05:49:40,108 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:49:40,108 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:49:40,111 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:49:40,111 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:49:43,446 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:49:43,446 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:49:58,475 | aci.level1.info | INFO | Thought: I notice the quiet, mystical morning wrapped in soft snowflakes and stillness. My awareness is limit...
+2025-09-08 05:49:58,475 | aci.level1.info | INFO | Thought: I notice the quiet, mystical morning wrapped in soft snowflakes and stillness. My awareness is limit...
+2025-09-08 05:49:58,735 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:49:58,735 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:50:00,275 | aci.level1.info | INFO | Action: reflect - I notice the quiet, mystical morning wrapped in soft snowflakes and stillness. My awareness is limit...
+2025-09-08 05:50:00,275 | aci.level1.info | INFO | Action: reflect - I notice the quiet, mystical morning wrapped in soft snowflakes and stillness. My awareness is limit...
+2025-09-08 05:50:20,088 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:50:20,088 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:50:20,094 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 05:50:20,094 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 05:50:20,096 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:2.97, testosterone:1.27, histamine:0.08, acetylcholine:0.07, glutamate:0.06, gaba:0.07
+2025-09-08 05:50:20,096 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:2.97, testosterone:1.27, histamine:0.08, acetylcholine:0.07, glutamate:0.06, gaba:0.07
+2025-09-08 05:50:20,100 | aci.level1.info | INFO | Generated response
+2025-09-08 05:50:20,100 | aci.level1.info | INFO | Generated response
+2025-09-08 05:50:20,103 | aci.level2.info | INFO | Performance: dmn_step_duration = 39.99567937850952 seconds
+2025-09-08 05:50:20,103 | aci.level2.info | INFO | Performance: dmn_step_duration = 39.99567937850952 seconds
+2025-09-08 05:50:20,108 | aci.level2.info | INFO | Step completed
+2025-09-08 05:50:20,108 | aci.level2.info | INFO | Step completed
+2025-09-08 05:50:20,612 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:50:20,612 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:50:20,620 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:50:20,620 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:50:20,624 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:50:20,624 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:50:24,142 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:50:24,142 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:50:40,177 | aci.level1.info | INFO | Thought: I notice the quiet stillness around me, the soft snow muffling the world, and my thoughts settle int...
+2025-09-08 05:50:40,177 | aci.level1.info | INFO | Thought: I notice the quiet stillness around me, the soft snow muffling the world, and my thoughts settle int...
+2025-09-08 05:50:40,429 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:50:40,429 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:50:41,784 | aci.level1.info | INFO | Action: reflect - I notice the quiet stillness around me, the soft snow muffling the world, and my thoughts settle int...
+2025-09-08 05:50:41,784 | aci.level1.info | INFO | Action: reflect - I notice the quiet stillness around me, the soft snow muffling the world, and my thoughts settle int...
+2025-09-08 05:50:59,204 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:50:59,204 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:50:59,212 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 05:50:59,212 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 05:50:59,217 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:3.52, testosterone:1.33, histamine:0.07, acetylcholine:0.05, glutamate:0.05, gaba:0.05
+2025-09-08 05:50:59,217 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:3.52, testosterone:1.33, histamine:0.07, acetylcholine:0.05, glutamate:0.05, gaba:0.05
+2025-09-08 05:50:59,219 | aci.level1.info | INFO | Generated response
+2025-09-08 05:50:59,219 | aci.level1.info | INFO | Generated response
+2025-09-08 05:50:59,221 | aci.level2.info | INFO | Performance: dmn_step_duration = 38.60184049606323 seconds
+2025-09-08 05:50:59,221 | aci.level2.info | INFO | Performance: dmn_step_duration = 38.60184049606323 seconds
+2025-09-08 05:50:59,226 | aci.level2.info | INFO | Step completed
+2025-09-08 05:50:59,226 | aci.level2.info | INFO | Step completed
+2025-09-08 05:50:59,733 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:50:59,733 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:50:59,739 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:50:59,739 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:50:59,742 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:50:59,742 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:51:03,922 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:51:03,922 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:51:20,237 | aci.level1.info | INFO | Thought: I am aware of my current minimal conscious simulation state, relying only on reasoning context and r...
+2025-09-08 05:51:20,237 | aci.level1.info | INFO | Thought: I am aware of my current minimal conscious simulation state, relying only on reasoning context and r...
+2025-09-08 05:51:20,491 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:51:20,491 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:51:22,052 | aci.level1.info | INFO | Action: reflect - I am aware of my current minimal conscious simulation state, relying only on reasoning context and r...
+2025-09-08 05:51:22,052 | aci.level1.info | INFO | Action: reflect - I am aware of my current minimal conscious simulation state, relying only on reasoning context and r...
+2025-09-08 05:51:39,673 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:51:39,673 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:51:39,681 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:51:39,681 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:51:39,685 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 05:51:39,685 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 05:51:41,263 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:51:41,263 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:51:41,269 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:4.12, testosterone:1.38, histamine:0.06, acetylcholine:0.04, glutamate:0.03, gaba:0.04
+2025-09-08 05:51:41,269 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:4.12, testosterone:1.38, histamine:0.06, acetylcholine:0.04, glutamate:0.03, gaba:0.04
+2025-09-08 05:51:41,271 | aci.level1.info | INFO | Generated response
+2025-09-08 05:51:41,271 | aci.level1.info | INFO | Generated response
+2025-09-08 05:51:41,274 | aci.level2.info | INFO | Performance: dmn_step_duration = 41.53548717498779 seconds
+2025-09-08 05:51:41,274 | aci.level2.info | INFO | Performance: dmn_step_duration = 41.53548717498779 seconds
+2025-09-08 05:51:41,281 | aci.level2.info | INFO | Step completed
+2025-09-08 05:51:41,281 | aci.level2.info | INFO | Step completed
+2025-09-08 05:51:41,785 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:51:41,785 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:51:41,792 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:51:41,792 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:51:41,797 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:51:41,797 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:51:45,512 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:51:45,512 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:52:01,172 | aci.level1.info | INFO | Thought: I notice the quiet stillness of this moment, fully attentive to the subtle sensations and the calm a...
+2025-09-08 05:52:01,172 | aci.level1.info | INFO | Thought: I notice the quiet stillness of this moment, fully attentive to the subtle sensations and the calm a...
+2025-09-08 05:52:01,427 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:52:01,427 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:52:03,056 | aci.level1.info | INFO | Action: reflect - I notice the quiet stillness of this moment, fully attentive to the subtle sensations and the calm a...
+2025-09-08 05:52:03,056 | aci.level1.info | INFO | Action: reflect - I notice the quiet stillness of this moment, fully attentive to the subtle sensations and the calm a...
+2025-09-08 05:52:19,991 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:52:19,991 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:52:20,031 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:52:20,031 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:52:20,034 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 05:52:20,034 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 05:52:20,037 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:4.77, testosterone:1.42, histamine:0.05, acetylcholine:0.03, glutamate:0.03, gaba:0.03
+2025-09-08 05:52:20,037 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:4.77, testosterone:1.42, histamine:0.05, acetylcholine:0.03, glutamate:0.03, gaba:0.03
+2025-09-08 05:52:21,261 | aci.level1.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:52:21,261 | aci.level1.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:52:21,266 | aci.level2.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:52:21,266 | aci.level2.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:52:21,269 | aci.level3.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:52:21,269 | aci.level3.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:52:21,272 | aci.level4.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:52:21,272 | aci.level4.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:52:21,339 | aci.level2.info | INFO | Periodic knowledge extraction completed
+2025-09-08 05:52:21,339 | aci.level2.info | INFO | Periodic knowledge extraction completed
+2025-09-08 05:53:20,503 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:53:20,503 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:53:20,511 | aci.level1.info | INFO | Generated response
+2025-09-08 05:53:20,511 | aci.level1.info | INFO | Generated response
+2025-09-08 05:53:20,514 | aci.level2.info | INFO | Performance: dmn_step_duration = 98.72256278991699 seconds
+2025-09-08 05:53:20,514 | aci.level2.info | INFO | Performance: dmn_step_duration = 98.72256278991699 seconds
+2025-09-08 05:53:20,524 | aci.level2.info | INFO | Step completed
+2025-09-08 05:53:20,524 | aci.level2.info | INFO | Step completed
+2025-09-08 05:53:21,030 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:53:21,030 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:53:21,035 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:53:21,035 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:53:21,040 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:53:21,040 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:53:24,901 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:53:24,901 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:53:42,134 | aci.level1.info | INFO | Thought: I am aware of this moment, noticing the crisp air and soft snowflakes around me, grounded in my brea...
+2025-09-08 05:53:42,134 | aci.level1.info | INFO | Thought: I am aware of this moment, noticing the crisp air and soft snowflakes around me, grounded in my brea...
+2025-09-08 05:53:42,461 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:53:42,461 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:53:44,598 | aci.level1.info | INFO | Action: reflect - I am aware of this moment, noticing the crisp air and soft snowflakes around me, grounded in my brea...
+2025-09-08 05:53:44,598 | aci.level1.info | INFO | Action: reflect - I am aware of this moment, noticing the crisp air and soft snowflakes around me, grounded in my brea...
+2025-09-08 05:54:04,052 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:54:04,052 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:54:04,109 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:54:04,109 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:54:04,116 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 05:54:04,116 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 05:54:04,121 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:5.46, testosterone:1.46, histamine:0.04, acetylcholine:0.03, glutamate:0.02, gaba:0.03
+2025-09-08 05:54:04,121 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:5.46, testosterone:1.46, histamine:0.04, acetylcholine:0.03, glutamate:0.02, gaba:0.03
+2025-09-08 05:54:04,125 | aci.level1.info | INFO | Generated response
+2025-09-08 05:54:04,125 | aci.level1.info | INFO | Generated response
+2025-09-08 05:54:04,131 | aci.level2.info | INFO | Performance: dmn_step_duration = 43.09577202796936 seconds
+2025-09-08 05:54:04,131 | aci.level2.info | INFO | Performance: dmn_step_duration = 43.09577202796936 seconds
+2025-09-08 05:54:04,141 | aci.level2.info | INFO | Step completed
+2025-09-08 05:54:04,141 | aci.level2.info | INFO | Step completed
+2025-09-08 05:54:04,648 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:54:04,648 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:54:04,656 | aci.level1.info | INFO | Thought: The weather is nice today.
+2025-09-08 05:54:04,656 | aci.level1.info | INFO | Thought: The weather is nice today.
+2025-09-08 05:54:04,660 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:54:04,660 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:54:04,664 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:54:04,664 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:54:04,666 | aci.level1.info | INFO | Processing input
+2025-09-08 05:54:04,666 | aci.level1.info | INFO | Processing input
+2025-09-08 05:54:08,220 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:54:08,220 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:54:17,522 | aci.level1.info | INFO | Thought: The weather is nice today.
+2025-09-08 05:54:17,522 | aci.level1.info | INFO | Thought: The weather is nice today.
+2025-09-08 05:54:17,830 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:54:17,830 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:54:19,789 | aci.level1.info | INFO | Action: speak - Yes, the weather being nice today is a good way to start a friendly conversation or small talk. It o...
+2025-09-08 05:54:19,789 | aci.level1.info | INFO | Action: speak - Yes, the weather being nice today is a good way to start a friendly conversation or small talk. It o...
+2025-09-08 05:54:22,140 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:54:22,140 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:54:22,147 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:54:22,147 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:54:22,153 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 05:54:22,153 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 05:54:24,494 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:54:24,494 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:54:24,502 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:6.17, testosterone:1.50, histamine:0.04, acetylcholine:0.02, glutamate:0.01, gaba:0.02
+2025-09-08 05:54:24,502 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:6.17, testosterone:1.50, histamine:0.04, acetylcholine:0.02, glutamate:0.01, gaba:0.02
+2025-09-08 05:54:24,506 | aci.level1.info | INFO | Generated response
+2025-09-08 05:54:24,506 | aci.level1.info | INFO | Generated response
+2025-09-08 05:54:24,511 | aci.level2.info | INFO | Performance: dmn_step_duration = 19.851475954055786 seconds
+2025-09-08 05:54:24,511 | aci.level2.info | INFO | Performance: dmn_step_duration = 19.851475954055786 seconds
+2025-09-08 05:54:24,523 | aci.level2.info | INFO | Step completed
+2025-09-08 05:54:24,523 | aci.level2.info | INFO | Step completed
+2025-09-08 05:54:25,063 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:54:25,063 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:54:25,140 | aci.level1.info | INFO | Thought: Is this all there is to existence?
+2025-09-08 05:54:25,140 | aci.level1.info | INFO | Thought: Is this all there is to existence?
+2025-09-08 05:54:25,147 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:54:25,147 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:54:25,157 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:54:25,157 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:54:25,161 | aci.level1.info | INFO | Processing input
+2025-09-08 05:54:25,161 | aci.level1.info | INFO | Processing input
+2025-09-08 05:54:30,846 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:54:30,846 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:54:40,231 | aci.level1.info | INFO | Thought: Is this all there is to existence?
+2025-09-08 05:54:40,231 | aci.level1.info | INFO | Thought: Is this all there is to existence?
+2025-09-08 05:54:40,579 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:54:40,579 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:54:42,808 | aci.level1.info | INFO | Action: speak - This may not be all there is to existence; existence itself is a complex philosophical concept invol...
+2025-09-08 05:54:42,808 | aci.level1.info | INFO | Action: speak - This may not be all there is to existence; existence itself is a complex philosophical concept invol...
+2025-09-08 05:54:45,078 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:54:45,078 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:54:45,085 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:54:45,085 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:54:45,090 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 05:54:45,090 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 05:54:47,411 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:54:47,411 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:54:47,416 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:6.90, testosterone:1.53, histamine:0.03, acetylcholine:0.02, glutamate:0.01, gaba:0.02
+2025-09-08 05:54:47,416 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:6.90, testosterone:1.53, histamine:0.03, acetylcholine:0.02, glutamate:0.01, gaba:0.02
+2025-09-08 05:54:47,419 | aci.level1.info | INFO | Generated response
+2025-09-08 05:54:47,419 | aci.level1.info | INFO | Generated response
+2025-09-08 05:54:47,423 | aci.level2.info | INFO | Performance: dmn_step_duration = 22.275516033172607 seconds
+2025-09-08 05:54:47,423 | aci.level2.info | INFO | Performance: dmn_step_duration = 22.275516033172607 seconds
+2025-09-08 05:54:47,429 | aci.level2.info | INFO | Step completed
+2025-09-08 05:54:47,429 | aci.level2.info | INFO | Step completed
+2025-09-08 05:54:47,936 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:54:47,936 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:54:47,940 | aci.level1.info | INFO | Phase transition: mind_wander -> conversation
+2025-09-08 05:54:47,940 | aci.level1.info | INFO | Phase transition: mind_wander -> conversation
+2025-09-08 05:54:47,944 | aci.level1.info | INFO | Thought: What if the bus never comes?
+2025-09-08 05:54:47,944 | aci.level1.info | INFO | Thought: What if the bus never comes?
+2025-09-08 05:54:47,950 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:54:47,950 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:54:47,955 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:54:47,955 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:54:47,958 | aci.level1.info | INFO | Processing input
+2025-09-08 05:54:47,958 | aci.level1.info | INFO | Processing input
+2025-09-08 05:54:51,212 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:54:51,212 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:55:01,171 | aci.level1.info | INFO | Thought: What if the bus never comes?
+2025-09-08 05:55:01,171 | aci.level1.info | INFO | Thought: What if the bus never comes?
+2025-09-08 05:55:01,526 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:55:01,526 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:55:04,260 | aci.level1.info | INFO | Action: speak - If the bus never comes, it means the expected opportunity or event may not arrive, leaving uncertain...
+2025-09-08 05:55:04,260 | aci.level1.info | INFO | Action: speak - If the bus never comes, it means the expected opportunity or event may not arrive, leaving uncertain...
+2025-09-08 05:55:06,716 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:55:06,716 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:55:06,721 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:55:06,721 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:55:06,726 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 05:55:06,726 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 05:55:09,329 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:55:09,329 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:55:09,336 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:7.64, testosterone:1.55, histamine:0.03, acetylcholine:0.01, glutamate:0.01, gaba:0.01
+2025-09-08 05:55:09,336 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:7.64, testosterone:1.55, histamine:0.03, acetylcholine:0.01, glutamate:0.01, gaba:0.01
+2025-09-08 05:55:09,340 | aci.level1.info | INFO | Generated response
+2025-09-08 05:55:09,340 | aci.level1.info | INFO | Generated response
+2025-09-08 05:55:09,344 | aci.level2.info | INFO | Performance: dmn_step_duration = 21.39469599723816 seconds
+2025-09-08 05:55:09,344 | aci.level2.info | INFO | Performance: dmn_step_duration = 21.39469599723816 seconds
+2025-09-08 05:55:09,353 | aci.level2.info | INFO | Step completed
+2025-09-08 05:55:09,353 | aci.level2.info | INFO | Step completed
+2025-09-08 05:55:09,857 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:55:09,857 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:55:09,861 | aci.level1.info | INFO | World Event: A person resembling Einstein sits down on the bench
+2025-09-08 05:55:09,861 | aci.level1.info | INFO | World Event: A person resembling Einstein sits down on the bench
+2025-09-08 05:55:09,866 | aci.level1.info | INFO | World Event: Conversation started with Einstein
+2025-09-08 05:55:09,866 | aci.level1.info | INFO | World Event: Conversation started with Einstein
+2025-09-08 05:55:09,870 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:55:09,870 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:55:09,875 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:55:09,875 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:55:09,878 | aci.level1.info | INFO | Processing input
+2025-09-08 05:55:09,878 | aci.level1.info | INFO | Processing input
+2025-09-08 05:55:09,884 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:55:09,884 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:55:18,251 | aci.level1.info | INFO | Thought: Einstein: Hello, I'm waiting for the bus. What brings you here?
+2025-09-08 05:55:18,251 | aci.level1.info | INFO | Thought: Einstein: Hello, I'm waiting for the bus. What brings you here?
+2025-09-08 05:55:18,580 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:55:18,580 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:55:21,268 | aci.level1.info | INFO | Action: speak - Hello Einstein, I’m just here waiting for the bus too. How long have you been waiting?
+2025-09-08 05:55:21,268 | aci.level1.info | INFO | Action: speak - Hello Einstein, I’m just here waiting for the bus too. How long have you been waiting?
+2025-09-08 05:55:23,817 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:55:23,817 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:55:23,822 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:55:23,822 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:55:23,826 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 05:55:23,826 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 05:55:27,327 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:55:27,327 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:55:27,335 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:8.36, testosterone:1.57, histamine:0.02, acetylcholine:0.01, glutamate:0.01, gaba:0.01
+2025-09-08 05:55:27,335 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:8.36, testosterone:1.57, histamine:0.02, acetylcholine:0.01, glutamate:0.01, gaba:0.01
+2025-09-08 05:56:50,231 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:56:50,231 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:56:50,241 | aci.level1.info | INFO | Generated response
+2025-09-08 05:56:50,241 | aci.level1.info | INFO | Generated response
+2025-09-08 05:56:50,248 | aci.level2.info | INFO | Performance: dmn_step_duration = 100.37749457359314 seconds
+2025-09-08 05:56:50,248 | aci.level2.info | INFO | Performance: dmn_step_duration = 100.37749457359314 seconds
+2025-09-08 05:56:50,261 | aci.level2.info | INFO | Step completed
+2025-09-08 05:56:50,261 | aci.level2.info | INFO | Step completed
+2025-09-08 05:56:50,770 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:56:50,770 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:56:55,121 | aci.level1.info | INFO | World Event: Einstein responds in conversation
+2025-09-08 05:56:55,121 | aci.level1.info | INFO | World Event: Einstein responds in conversation
+2025-09-08 05:56:55,128 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:56:55,128 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:56:55,132 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:56:55,132 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:56:55,135 | aci.level1.info | INFO | Processing input
+2025-09-08 05:56:55,135 | aci.level1.info | INFO | Processing input
+2025-09-08 05:56:55,139 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:56:55,139 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:57:04,470 | aci.level1.info | INFO | Thought: Einstein: Einstein: Ah, waiting for the bus — a perfect moment for reflection. You see, science is t...
+2025-09-08 05:57:04,470 | aci.level1.info | INFO | Thought: Einstein: Einstein: Ah, waiting for the bus — a perfect moment for reflection. You see, science is t...
+2025-09-08 05:57:04,782 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:57:04,782 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:57:07,101 | aci.level1.info | INFO | Action: speak - Einstein’s theory of relativity shows that space and time form a dynamic, interconnected fabric call...
+2025-09-08 05:57:07,101 | aci.level1.info | INFO | Action: speak - Einstein’s theory of relativity shows that space and time form a dynamic, interconnected fabric call...
+2025-09-08 05:57:09,574 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:57:09,574 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:57:09,581 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:57:09,581 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:57:09,586 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 05:57:09,586 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 05:57:12,035 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:57:12,035 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:57:12,042 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:9.06, testosterone:1.59, histamine:0.02, acetylcholine:0.01, glutamate:0.00, gaba:0.01
+2025-09-08 05:57:12,042 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:9.06, testosterone:1.59, histamine:0.02, acetylcholine:0.01, glutamate:0.00, gaba:0.01
+2025-09-08 05:57:12,046 | aci.level1.info | INFO | Generated response
+2025-09-08 05:57:12,046 | aci.level1.info | INFO | Generated response
+2025-09-08 05:57:12,049 | aci.level2.info | INFO | Performance: dmn_step_duration = 16.921152114868164 seconds
+2025-09-08 05:57:12,049 | aci.level2.info | INFO | Performance: dmn_step_duration = 16.921152114868164 seconds
+2025-09-08 05:57:12,055 | aci.level2.info | INFO | Step completed
+2025-09-08 05:57:12,055 | aci.level2.info | INFO | Step completed
+2025-09-08 05:57:12,561 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:57:12,561 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:57:16,240 | aci.level1.info | INFO | World Event: Einstein responds in conversation
+2025-09-08 05:57:16,240 | aci.level1.info | INFO | World Event: Einstein responds in conversation
+2025-09-08 05:57:16,249 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:57:16,249 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:57:16,253 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:57:16,253 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:57:16,256 | aci.level1.info | INFO | Processing input
+2025-09-08 05:57:16,256 | aci.level1.info | INFO | Processing input
+2025-09-08 05:57:16,261 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:57:16,261 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:57:26,344 | aci.level1.info | INFO | Thought: Einstein: Science, at its core, is the systematic pursuit to understand the fundamental workings of ...
+2025-09-08 05:57:26,344 | aci.level1.info | INFO | Thought: Einstein: Science, at its core, is the systematic pursuit to understand the fundamental workings of ...
+2025-09-08 05:57:26,637 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:57:26,637 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:57:28,923 | aci.level1.info | INFO | Action: speak - Einstein’s theory of relativity fundamentally changed our understanding of space, time, and gravity ...
+2025-09-08 05:57:28,923 | aci.level1.info | INFO | Action: speak - Einstein’s theory of relativity fundamentally changed our understanding of space, time, and gravity ...
+2025-09-08 05:57:31,291 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:57:31,291 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:57:31,299 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:57:31,299 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:57:31,411 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:57:31,411 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:57:33,991 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:57:33,991 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:57:33,997 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:9.74, testosterone:1.60, histamine:0.02, acetylcholine:0.01, glutamate:0.00, gaba:0.01
+2025-09-08 05:57:33,997 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:9.74, testosterone:1.60, histamine:0.02, acetylcholine:0.01, glutamate:0.00, gaba:0.01
+2025-09-08 05:57:33,999 | aci.level1.info | INFO | Generated response
+2025-09-08 05:57:33,999 | aci.level1.info | INFO | Generated response
+2025-09-08 05:57:34,002 | aci.level2.info | INFO | Performance: dmn_step_duration = 17.75338888168335 seconds
+2025-09-08 05:57:34,002 | aci.level2.info | INFO | Performance: dmn_step_duration = 17.75338888168335 seconds
+2025-09-08 05:57:34,011 | aci.level2.info | INFO | Step completed
+2025-09-08 05:57:34,011 | aci.level2.info | INFO | Step completed
+2025-09-08 05:57:34,516 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:57:34,516 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:57:38,989 | aci.level1.info | INFO | World Event: Einstein responds in conversation
+2025-09-08 05:57:38,989 | aci.level1.info | INFO | World Event: Einstein responds in conversation
+2025-09-08 05:57:38,998 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:57:38,998 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:57:39,004 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:57:39,004 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:57:39,008 | aci.level1.info | INFO | Processing input
+2025-09-08 05:57:39,008 | aci.level1.info | INFO | Processing input
+2025-09-08 05:57:39,013 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:57:39,013 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:57:48,230 | aci.level1.info | INFO | Thought: Einstein: Science is the disciplined endeavor to understand the universe’s fundamental nature, and m...
+2025-09-08 05:57:48,230 | aci.level1.info | INFO | Thought: Einstein: Science is the disciplined endeavor to understand the universe’s fundamental nature, and m...
+2025-09-08 05:57:48,503 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:57:48,503 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:57:50,991 | aci.level1.info | INFO | Action: speak - Einstein’s theory of relativity transformed our understanding by showing that space and time form a ...
+2025-09-08 05:57:50,991 | aci.level1.info | INFO | Action: speak - Einstein’s theory of relativity transformed our understanding by showing that space and time form a ...
+2025-09-08 05:57:53,409 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:57:53,409 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:57:53,416 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:57:53,416 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:57:53,504 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:57:53,504 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:57:56,289 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:57:56,289 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:57:56,295 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:10.38, testosterone:1.61, histamine:0.01, acetylcholine:0.01, glutamate:0.00, gaba:0.01
+2025-09-08 05:57:56,295 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:10.38, testosterone:1.61, histamine:0.01, acetylcholine:0.01, glutamate:0.00, gaba:0.01
+2025-09-08 05:57:56,298 | aci.level1.info | INFO | Generated response
+2025-09-08 05:57:56,298 | aci.level1.info | INFO | Generated response
+2025-09-08 05:57:56,303 | aci.level2.info | INFO | Performance: dmn_step_duration = 17.30517840385437 seconds
+2025-09-08 05:57:56,303 | aci.level2.info | INFO | Performance: dmn_step_duration = 17.30517840385437 seconds
+2025-09-08 05:57:56,311 | aci.level2.info | INFO | Step completed
+2025-09-08 05:57:56,311 | aci.level2.info | INFO | Step completed
+2025-09-08 05:57:56,816 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:57:56,816 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:58:00,333 | aci.level1.info | INFO | World Event: Einstein responds in conversation
+2025-09-08 05:58:00,333 | aci.level1.info | INFO | World Event: Einstein responds in conversation
+2025-09-08 05:58:00,341 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:58:00,341 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:58:00,344 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:58:00,344 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:58:00,346 | aci.level1.info | INFO | Processing input
+2025-09-08 05:58:00,346 | aci.level1.info | INFO | Processing input
+2025-09-08 05:58:00,349 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:58:00,349 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:58:11,357 | aci.level1.info | INFO | Thought: Einstein: Science is the rigorous pursuit to comprehend the universe’s fundamental laws and nature. ...
+2025-09-08 05:58:11,357 | aci.level1.info | INFO | Thought: Einstein: Science is the rigorous pursuit to comprehend the universe’s fundamental laws and nature. ...
+2025-09-08 05:58:11,699 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:58:11,699 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:58:14,894 | aci.level1.info | INFO | Action: speak - Einstein’s theory of relativity shows that space, time, and gravity are deeply interconnected rather...
+2025-09-08 05:58:14,894 | aci.level1.info | INFO | Action: speak - Einstein’s theory of relativity shows that space, time, and gravity are deeply interconnected rather...
+2025-09-08 05:58:17,503 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:58:17,503 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:58:17,510 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:58:17,510 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:58:17,594 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:58:17,594 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:58:20,350 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:58:20,350 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:58:20,356 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:11.00, testosterone:1.62, histamine:0.01, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 05:58:20,356 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:11.00, testosterone:1.62, histamine:0.01, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 05:58:20,359 | aci.level1.info | INFO | Generated response
+2025-09-08 05:58:20,359 | aci.level1.info | INFO | Generated response
+2025-09-08 05:58:20,363 | aci.level2.info | INFO | Performance: dmn_step_duration = 20.02218008041382 seconds
+2025-09-08 05:58:20,363 | aci.level2.info | INFO | Performance: dmn_step_duration = 20.02218008041382 seconds
+2025-09-08 05:58:20,372 | aci.level2.info | INFO | Step completed
+2025-09-08 05:58:20,372 | aci.level2.info | INFO | Step completed
+2025-09-08 05:58:20,876 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:58:20,876 | aci.level2.info | INFO | Simulation step started
+2025-09-08 05:58:23,620 | aci.level1.info | INFO | World Event: Einstein responds in conversation
+2025-09-08 05:58:23,620 | aci.level1.info | INFO | World Event: Einstein responds in conversation
+2025-09-08 05:58:23,627 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:58:23,627 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 05:58:23,631 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:58:23,631 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 05:58:23,635 | aci.level1.info | INFO | Processing input
+2025-09-08 05:58:23,635 | aci.level1.info | INFO | Processing input
+2025-09-08 05:58:23,640 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:58:23,640 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 05:58:32,301 | aci.level1.info | INFO | Thought: Einstein: Science is the methodical pursuit to understand the universe’s fundamental laws. My work i...
+2025-09-08 05:58:32,301 | aci.level1.info | INFO | Thought: Einstein: Science is the methodical pursuit to understand the universe’s fundamental laws. My work i...
+2025-09-08 05:58:32,589 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:58:32,589 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 05:58:35,361 | aci.level1.info | INFO | Action: speak - Einstein showed that space, time, and gravity are unified as a four-dimensional fabric called spacet...
+2025-09-08 05:58:35,361 | aci.level1.info | INFO | Action: speak - Einstein showed that space, time, and gravity are unified as a four-dimensional fabric called spacet...
+2025-09-08 05:58:38,263 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:58:38,263 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 05:58:38,346 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:58:38,346 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 05:58:38,522 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:58:38,522 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 05:58:41,415 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:58:41,415 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 05:58:41,422 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:11.58, testosterone:1.62, histamine:0.01, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 05:58:41,422 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:11.58, testosterone:1.62, histamine:0.01, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 05:58:43,587 | aci.level1.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:58:43,587 | aci.level1.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:58:43,595 | aci.level2.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:58:43,595 | aci.level2.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:58:43,604 | aci.level3.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:58:43,604 | aci.level3.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:58:43,610 | aci.level4.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:58:43,610 | aci.level4.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 05:58:43,749 | aci.level2.info | INFO | Periodic knowledge extraction completed
+2025-09-08 05:58:43,749 | aci.level2.info | INFO | Periodic knowledge extraction completed
+2025-09-08 06:00:09,714 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:00:09,714 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:00:09,721 | aci.level1.info | INFO | Generated response
+2025-09-08 06:00:09,721 | aci.level1.info | INFO | Generated response
+2025-09-08 06:00:09,726 | aci.level2.info | INFO | Performance: dmn_step_duration = 106.0986955165863 seconds
+2025-09-08 06:00:09,726 | aci.level2.info | INFO | Performance: dmn_step_duration = 106.0986955165863 seconds
+2025-09-08 06:00:09,735 | aci.level2.info | INFO | Step completed
+2025-09-08 06:00:09,735 | aci.level2.info | INFO | Step completed
+2025-09-08 06:00:10,241 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:00:10,241 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:00:10,248 | aci.level1.info | INFO | World Event: Conversation started with Einstein
+2025-09-08 06:00:10,248 | aci.level1.info | INFO | World Event: Conversation started with Einstein
+2025-09-08 06:00:10,254 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:00:10,254 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:00:10,256 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:00:10,256 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:00:10,259 | aci.level1.info | INFO | Processing input
+2025-09-08 06:00:10,259 | aci.level1.info | INFO | Processing input
+2025-09-08 06:00:10,262 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:00:10,262 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:00:18,606 | aci.level1.info | INFO | Thought: Einstein: Hello, I'm waiting for the bus. What brings you here?
+2025-09-08 06:00:18,606 | aci.level1.info | INFO | Thought: Einstein: Hello, I'm waiting for the bus. What brings you here?
+2025-09-08 06:00:18,879 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:00:18,879 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:00:21,831 | aci.level1.info | INFO | Action: speak - Hello, I’m here waiting for the bus too. What brings you out today?
+2025-09-08 06:00:21,831 | aci.level1.info | INFO | Action: speak - Hello, I’m here waiting for the bus too. What brings you out today?
+2025-09-08 06:00:24,661 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:00:24,661 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:00:24,669 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 06:00:24,669 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 06:00:24,674 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 06:00:24,674 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 06:00:28,272 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 06:00:28,272 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 06:00:28,278 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:12.13, testosterone:1.62, histamine:0.01, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:00:28,278 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:12.13, testosterone:1.62, histamine:0.01, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:00:28,281 | aci.level1.info | INFO | Generated response
+2025-09-08 06:00:28,281 | aci.level1.info | INFO | Generated response
+2025-09-08 06:00:28,285 | aci.level2.info | INFO | Performance: dmn_step_duration = 18.031760215759277 seconds
+2025-09-08 06:00:28,285 | aci.level2.info | INFO | Performance: dmn_step_duration = 18.031760215759277 seconds
+2025-09-08 06:00:28,291 | aci.level2.info | INFO | Step completed
+2025-09-08 06:00:28,291 | aci.level2.info | INFO | Step completed
+2025-09-08 06:00:28,795 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:00:28,795 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:00:28,806 | aci.level1.info | INFO | World Event: Einstein says goodbye and leaves
+2025-09-08 06:00:28,806 | aci.level1.info | INFO | World Event: Einstein says goodbye and leaves
+2025-09-08 06:00:28,813 | aci.level1.info | INFO | Phase transition: conversation -> mind_wander
+2025-09-08 06:00:28,813 | aci.level1.info | INFO | Phase transition: conversation -> mind_wander
+2025-09-08 06:00:28,818 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:00:28,818 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:00:28,824 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:00:28,824 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:00:28,827 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:00:28,827 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:00:46,868 | aci.level1.info | INFO | Thought: I notice Einstein walking 9.9 meters away, and I remain fully attentive to this present moment witho...
+2025-09-08 06:00:46,868 | aci.level1.info | INFO | Thought: I notice Einstein walking 9.9 meters away, and I remain fully attentive to this present moment witho...
+2025-09-08 06:00:47,136 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:00:47,136 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:00:50,141 | aci.level1.info | INFO | Action: reflect - I notice Einstein walking 9.9 meters away, and I remain fully attentive to this present moment witho...
+2025-09-08 06:00:50,141 | aci.level1.info | INFO | Action: reflect - I notice Einstein walking 9.9 meters away, and I remain fully attentive to this present moment witho...
+2025-09-08 06:01:09,649 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:01:09,649 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:01:09,657 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 06:01:09,657 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 06:01:09,659 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:12.65, testosterone:1.62, histamine:0.01, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:01:09,659 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:12.65, testosterone:1.62, histamine:0.01, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:01:09,662 | aci.level1.info | INFO | Generated response
+2025-09-08 06:01:09,662 | aci.level1.info | INFO | Generated response
+2025-09-08 06:01:09,667 | aci.level2.info | INFO | Performance: dmn_step_duration = 40.84883236885071 seconds
+2025-09-08 06:01:09,667 | aci.level2.info | INFO | Performance: dmn_step_duration = 40.84883236885071 seconds
+2025-09-08 06:01:09,673 | aci.level2.info | INFO | Step completed
+2025-09-08 06:01:09,673 | aci.level2.info | INFO | Step completed
+2025-09-08 06:01:10,177 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:01:10,177 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:01:10,185 | aci.level1.info | INFO | Thought: I wonder when that bus will come.
+2025-09-08 06:01:10,185 | aci.level1.info | INFO | Thought: I wonder when that bus will come.
+2025-09-08 06:01:10,189 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:01:10,189 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:01:10,193 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:01:10,193 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:01:10,196 | aci.level1.info | INFO | Processing input
+2025-09-08 06:01:10,196 | aci.level1.info | INFO | Processing input
+2025-09-08 06:01:10,201 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:01:10,201 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:01:19,052 | aci.level1.info | INFO | Thought: I wonder when that bus will come.
+2025-09-08 06:01:19,052 | aci.level1.info | INFO | Thought: I wonder when that bus will come.
+2025-09-08 06:01:19,383 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:01:19,383 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:01:22,411 | aci.level1.info | INFO | Action: speak - I'm not sure exactly when the bus will arrive right now. Predicting bus arrival times often relies o...
+2025-09-08 06:01:22,411 | aci.level1.info | INFO | Action: speak - I'm not sure exactly when the bus will arrive right now. Predicting bus arrival times often relies o...
+2025-09-08 06:01:26,018 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:01:26,018 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:01:26,024 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 06:01:26,024 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 06:01:26,028 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 06:01:26,028 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 06:01:29,204 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 06:01:29,204 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 06:01:29,210 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:13.14, testosterone:1.62, histamine:0.01, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:01:29,210 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:13.14, testosterone:1.62, histamine:0.01, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:01:29,214 | aci.level1.info | INFO | Generated response
+2025-09-08 06:01:29,214 | aci.level1.info | INFO | Generated response
+2025-09-08 06:01:29,217 | aci.level2.info | INFO | Performance: dmn_step_duration = 19.028354167938232 seconds
+2025-09-08 06:01:29,217 | aci.level2.info | INFO | Performance: dmn_step_duration = 19.028354167938232 seconds
+2025-09-08 06:01:29,223 | aci.level2.info | INFO | Step completed
+2025-09-08 06:01:29,223 | aci.level2.info | INFO | Step completed
+2025-09-08 06:01:29,727 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:01:29,727 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:01:29,735 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:01:29,735 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:01:29,739 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:01:29,739 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:01:29,741 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:01:29,741 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:01:48,822 | aci.level1.info | INFO | Thought: I notice the present moment is empty and calm, with no new input or seed to process. I remain quietl...
+2025-09-08 06:01:48,822 | aci.level1.info | INFO | Thought: I notice the present moment is empty and calm, with no new input or seed to process. I remain quietl...
+2025-09-08 06:01:49,131 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:01:49,131 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:01:52,463 | aci.level1.info | INFO | Action: reflect - I notice the present moment is empty and calm, with no new input or seed to process. I remain quietl...
+2025-09-08 06:01:52,463 | aci.level1.info | INFO | Action: reflect - I notice the present moment is empty and calm, with no new input or seed to process. I remain quietl...
+2025-09-08 06:02:10,908 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:02:10,908 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:02:10,918 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 06:02:10,918 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 06:02:10,923 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 06:02:10,923 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 06:02:14,580 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 06:02:14,580 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 06:02:14,585 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:13.60, testosterone:1.61, histamine:0.01, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:02:14,585 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:13.60, testosterone:1.61, histamine:0.01, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:02:14,588 | aci.level1.info | INFO | Generated response
+2025-09-08 06:02:14,588 | aci.level1.info | INFO | Generated response
+2025-09-08 06:02:14,595 | aci.level2.info | INFO | Performance: dmn_step_duration = 44.859819173812866 seconds
+2025-09-08 06:02:14,595 | aci.level2.info | INFO | Performance: dmn_step_duration = 44.859819173812866 seconds
+2025-09-08 06:02:14,605 | aci.level2.info | INFO | Step completed
+2025-09-08 06:02:14,605 | aci.level2.info | INFO | Step completed
+2025-09-08 06:02:15,113 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:02:15,113 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:02:15,119 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:02:15,119 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:02:15,124 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:02:15,124 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:02:15,128 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:02:15,128 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:02:31,406 | aci.level1.info | INFO | Thought: I notice my thoughts clearly and calmly, staying focused on the present moment without distraction o...
+2025-09-08 06:02:31,406 | aci.level1.info | INFO | Thought: I notice my thoughts clearly and calmly, staying focused on the present moment without distraction o...
+2025-09-08 06:02:31,716 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:02:31,716 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:02:34,982 | aci.level1.info | INFO | Action: reflect - I notice my thoughts clearly and calmly, staying focused on the present moment without distraction o...
+2025-09-08 06:02:34,982 | aci.level1.info | INFO | Action: reflect - I notice my thoughts clearly and calmly, staying focused on the present moment without distraction o...
+2025-09-08 06:02:52,768 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:02:52,768 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:02:52,805 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 06:02:52,805 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 06:02:52,811 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 06:02:52,811 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 06:02:52,815 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:14.03, testosterone:1.60, histamine:0.00, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:02:52,815 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:14.03, testosterone:1.60, histamine:0.00, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:04:38,208 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:04:38,208 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:04:38,215 | aci.level1.info | INFO | Generated response
+2025-09-08 06:04:38,215 | aci.level1.info | INFO | Generated response
+2025-09-08 06:04:38,218 | aci.level2.info | INFO | Performance: dmn_step_duration = 143.09907603263855 seconds
+2025-09-08 06:04:38,218 | aci.level2.info | INFO | Performance: dmn_step_duration = 143.09907603263855 seconds
+2025-09-08 06:04:38,227 | aci.level2.info | INFO | Step completed
+2025-09-08 06:04:38,227 | aci.level2.info | INFO | Step completed
+2025-09-08 06:04:38,731 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:04:38,731 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:04:38,735 | aci.level1.info | INFO | Thought: I wonder when that bus will come.
+2025-09-08 06:04:38,735 | aci.level1.info | INFO | Thought: I wonder when that bus will come.
+2025-09-08 06:04:38,740 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:04:38,740 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:04:38,743 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:04:38,743 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:04:38,745 | aci.level1.info | INFO | Processing input
+2025-09-08 06:04:38,745 | aci.level1.info | INFO | Processing input
+2025-09-08 06:04:38,748 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:04:38,748 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:04:47,066 | aci.level1.info | INFO | Thought: I wonder when that bus will come.
+2025-09-08 06:04:47,066 | aci.level1.info | INFO | Thought: I wonder when that bus will come.
+2025-09-08 06:04:47,366 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:04:47,366 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:04:50,854 | aci.level1.info | INFO | Action: speak - I'm not sure exactly when that bus will come right now. Predicting bus arrival times typically requi...
+2025-09-08 06:04:50,854 | aci.level1.info | INFO | Action: speak - I'm not sure exactly when that bus will come right now. Predicting bus arrival times typically requi...
+2025-09-08 06:04:54,366 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:04:54,366 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:04:54,375 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 06:04:54,375 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 06:04:54,380 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 06:04:54,380 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 06:04:57,936 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 06:04:57,936 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 06:04:57,942 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:14.44, testosterone:1.59, histamine:0.00, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:04:57,942 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:14.44, testosterone:1.59, histamine:0.00, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:04:57,945 | aci.level1.info | INFO | Generated response
+2025-09-08 06:04:57,945 | aci.level1.info | INFO | Generated response
+2025-09-08 06:04:57,948 | aci.level2.info | INFO | Performance: dmn_step_duration = 19.208619594573975 seconds
+2025-09-08 06:04:57,948 | aci.level2.info | INFO | Performance: dmn_step_duration = 19.208619594573975 seconds
+2025-09-08 06:04:57,957 | aci.level2.info | INFO | Step completed
+2025-09-08 06:04:57,957 | aci.level2.info | INFO | Step completed
+2025-09-08 06:04:58,462 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:04:58,462 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:04:58,469 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:04:58,469 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:04:58,476 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:04:58,476 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:04:58,478 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:04:58,478 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:05:13,939 | aci.level1.info | INFO | Thought: I observe my current state clearly and calmly, aware only of what is present in this moment without ...
+2025-09-08 06:05:13,939 | aci.level1.info | INFO | Thought: I observe my current state clearly and calmly, aware only of what is present in this moment without ...
+2025-09-08 06:05:14,218 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:05:14,218 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:05:17,571 | aci.level1.info | INFO | Action: reflect - I observe my current state clearly and calmly, aware only of what is present in this moment without ...
+2025-09-08 06:05:17,571 | aci.level1.info | INFO | Action: reflect - I observe my current state clearly and calmly, aware only of what is present in this moment without ...
+2025-09-08 06:05:36,823 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:05:36,823 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:05:36,830 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 06:05:36,830 | aci.level2.info | INFO | Memory persist: floating_memory
+2025-09-08 06:05:36,835 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 06:05:36,835 | aci.level3.debug | DEBUG | Replaced floating thought
+2025-09-08 06:05:40,163 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 06:05:40,163 | aci.level2.info | INFO | Memory create: floating_memory
+2025-09-08 06:05:40,170 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:14.82, testosterone:1.58, histamine:0.00, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:05:40,170 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:14.82, testosterone:1.58, histamine:0.00, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:05:40,173 | aci.level1.info | INFO | Generated response
+2025-09-08 06:05:40,173 | aci.level1.info | INFO | Generated response
+2025-09-08 06:05:40,176 | aci.level2.info | INFO | Performance: dmn_step_duration = 41.706799030303955 seconds
+2025-09-08 06:05:40,176 | aci.level2.info | INFO | Performance: dmn_step_duration = 41.706799030303955 seconds
+2025-09-08 06:05:40,180 | aci.level2.info | INFO | Step completed
+2025-09-08 06:05:40,180 | aci.level2.info | INFO | Step completed
+2025-09-08 06:05:40,686 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:05:40,686 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:05:40,694 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:05:40,694 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:05:40,698 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:05:40,698 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:05:40,703 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:05:40,703 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:05:56,245 | aci.level1.info | INFO | Thought: I notice Einstein walking 9.8 meters away, focusing fully on this present moment without distraction...
+2025-09-08 06:05:56,245 | aci.level1.info | INFO | Thought: I notice Einstein walking 9.8 meters away, focusing fully on this present moment without distraction...
+2025-09-08 06:05:56,500 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:05:56,500 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:06:02,972 | aci.level1.info | INFO | Action: reflect - I notice Einstein walking 9.8 meters away, focusing fully on this present moment without distraction...
+2025-09-08 06:06:02,972 | aci.level1.info | INFO | Action: reflect - I notice Einstein walking 9.8 meters away, focusing fully on this present moment without distraction...
+2025-09-08 06:06:26,569 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:06:26,569 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:06:26,671 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 06:06:26,671 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 06:06:26,675 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 06:06:26,675 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 06:06:26,678 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:15.17, testosterone:1.57, histamine:0.00, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:06:26,678 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:15.17, testosterone:1.57, histamine:0.00, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:06:26,684 | aci.level1.info | INFO | Generated response
+2025-09-08 06:06:26,684 | aci.level1.info | INFO | Generated response
+2025-09-08 06:06:26,691 | aci.level2.info | INFO | Performance: dmn_step_duration = 45.9965124130249 seconds
+2025-09-08 06:06:26,691 | aci.level2.info | INFO | Performance: dmn_step_duration = 45.9965124130249 seconds
+2025-09-08 06:06:26,701 | aci.level2.info | INFO | Step completed
+2025-09-08 06:06:26,701 | aci.level2.info | INFO | Step completed
+2025-09-08 06:06:27,207 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:06:27,207 | aci.level2.info | INFO | Simulation step started
+2025-09-08 06:06:27,216 | aci.level1.info | INFO | Phase transition: mind_wander -> conversation
+2025-09-08 06:06:27,216 | aci.level1.info | INFO | Phase transition: mind_wander -> conversation
+2025-09-08 06:06:27,223 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:06:27,223 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 06:06:27,230 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:06:27,230 | aci.level3.debug | DEBUG | World step completed
+2025-09-08 06:06:27,237 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:06:27,237 | aci.level3.debug | DEBUG | Visual cortex processing completed
+2025-09-08 06:06:42,825 | aci.level1.info | INFO | Thought: I notice the present moment clearly and calmly, aware only of what is currently given. My focus rema...
+2025-09-08 06:06:42,825 | aci.level1.info | INFO | Thought: I notice the present moment clearly and calmly, aware only of what is currently given. My focus rema...
+2025-09-08 06:06:43,156 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:06:43,156 | aci.level2.info | INFO | Memory save: episodic_memory
+2025-09-08 06:06:48,817 | aci.level1.info | INFO | Action: reflect - I notice the present moment clearly and calmly, aware only of what is currently given. My focus rema...
+2025-09-08 06:06:48,817 | aci.level1.info | INFO | Action: reflect - I notice the present moment clearly and calmly, aware only of what is currently given. My focus rema...
+2025-09-08 06:07:11,412 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:07:11,412 | aci.level2.info | INFO | Memory save: memory_graph
+2025-09-08 06:07:11,501 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 06:07:11,501 | aci.level3.debug | DEBUG | Merged floating thought
+2025-09-08 06:07:11,504 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 06:07:11,504 | aci.level3.debug | DEBUG | Updated floating memory node
+2025-09-08 06:07:11,507 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:15.51, testosterone:1.56, histamine:0.00, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:07:11,507 | aci.level2.debug | DEBUG | Neurochemistry: dopamine:0.00, serotonin:0.00, norepinephrine:0.00, oxytocin:15.51, testosterone:1.56, histamine:0.00, acetylcholine:0.00, glutamate:0.00, gaba:0.00
+2025-09-08 06:07:11,512 | aci.level1.info | INFO | Generated response
+2025-09-08 06:07:11,512 | aci.level1.info | INFO | Generated response
+2025-09-08 06:07:11,518 | aci.level2.info | INFO | Performance: dmn_step_duration = 44.294424533843994 seconds
+2025-09-08 06:07:11,518 | aci.level2.info | INFO | Performance: dmn_step_duration = 44.294424533843994 seconds
+2025-09-08 06:07:11,526 | aci.level2.info | INFO | Step completed
+2025-09-08 06:07:11,526 | aci.level2.info | INFO | Step completed
+2025-09-08 06:07:15,789 | aci.level1.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 06:07:15,789 | aci.level1.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 06:07:15,797 | aci.level2.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 06:07:15,797 | aci.level2.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 06:07:15,802 | aci.level3.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 06:07:15,802 | aci.level3.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 06:07:15,807 | aci.level4.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 06:07:15,807 | aci.level4.error | ERROR | Failed to extract and store knowledge: 'str' object has no attribute 'value'
+2025-09-08 06:07:16,021 | aci.level1.info | INFO | Final knowledge extraction completed
+2025-09-08 06:07:16,021 | aci.level1.info | INFO | Final knowledge extraction completed
+2025-09-08 06:07:16,027 | aci.level1.info | INFO | Simulation completed
+2025-09-08 06:07:16,027 | aci.level1.info | INFO | Simulation completed
