@@ -157,28 +157,6 @@ Quarantine re-check schedule: every Q ticks or upon new supporting evidence refe
 | backlog_flag True | Skip calibration update (use cached T) |
 
 ---
-## 12. Pseudocode (Concise)
-```python
-def run_coherence_hook(chain, ctx):
-    props = chain.propositions or extract_props(chain.text)
-    tags = []
-    for p in props:
-        evid = retrieve(p, ctx.mem_api, ctx.cfg)
-        heur = heuristic(p, evid)
-        model_scores = nli(p, evid, ctx) if ctx.model_ready and within_latency() else None
-        entail_raw, contr_raw = fuse(heur, model_scores, ctx.cfg)
-        types, drift_facets, contr_evid = conflict_types(p, contr_raw, evid, ctx.cfg)
-        entail_c, contr_c, sigma = calibrate(entail_raw, contr_raw, ctx.calib_state)
-        tag = make_tag(p, entail_c, contr_c, sigma, types, drift_facets, evid, contr_evid)
-        tags.append(tag)
-    if should_block(tags, chain, ctx.cfg):
-        return HookResult(blocked=True, prop_tags=[], chain_metrics=None)
-    metrics = aggregate(tags, ctx.prev_coherence, ctx.cfg)
-    log(tags, metrics)
-    return HookResult(blocked=False, prop_tags=tags, chain_metrics=metrics)
-```
-
----
 ## 13. Metrics to Log
 | Metric | Definition | Goal |
 |--------|------------|------|

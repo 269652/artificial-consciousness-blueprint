@@ -44,7 +44,6 @@ For detailed steps, see [ideas/DMN.md](ideas/DMN.md).
 
 -   Hierarchical memory consolidation with probabilistic causal extraction and Markov chain learning for predictive reasoning
 
-
 -   Stream-of-consciousness thought generation with iterative refinement and neuromodulator-weighted scoring
 
 -   Social self-modeling through theory of mind reasoning and perspective-taking capabilities
@@ -59,6 +58,18 @@ For detailed steps, see [ideas/DMN.md](ideas/DMN.md).
 - Self Modeling Layer (SML): Predicts next internal SelfState, tracks drift, coherence, calibration; supplies candidate impact (Δcoherence, drift_risk, alignment_delta) and counterfactual self simulations to DMN scoring/selection.
 - Input / Language Optimizer (ILO): Normalizes inbound text (ASR/OCR/chat), repairs typos, segments intents, annotates uncertainty & safety flags prior to MDN parsing, reducing downstream parse / hallucination risk.
 
+## [Memory Architecture: Multidimensional Graph of Experience](./ideas/MemoryArchitecture.md)
+
+The heartbeat of consciousness in this model is the memory graph, which acts both as a **database of experience** and a **dynamic knowledge architecture** driving cognition and self-modeling. 
+
+**Key Insight**: Memory is not passive storage but an evolving, prioritized, multi-dimensional knowledge graph that supports scalable abstraction, associative search, and semantic generalization. This ACI centers on **memory as identity**: consciousness manifests from the system's capacity to reflect meaningfully on its own past states and their causal relationships.
+
+See [Memory Architecture](./ideas/MemoryArchitecture.md) for full technical details on:
+- Multi-relational embedding spaces with temporal, causal, similarity, and relevance relations
+- Hierarchical consolidation from episodic → semantic → autobiographical memory
+- Probabilistic knowledge formation and symbolic abstraction
+- Complex autobiographical queries and self-model formation
+
 ## Consolidated Module Inventory
 | Module | Purpose (1‑line) | Status* |
 |--------|------------------|---------|
@@ -71,6 +82,7 @@ For detailed steps, see [ideas/DMN.md](ideas/DMN.md).
 | Ventral Striatum (VS) | Exploration & valuation | Planned |
 | NAcc | Reward tagging & persistence | Planned |
 | Memory Graph | Multi-relational episodic/semantic store | Partial |
+| Memory Architecture | Multi-dimensional knowledge graph with relational embeddings | Documented |
 | Visionary Memory | Prospective (goal/plan/hypothesis) nodes | Planned |
 | Identity Memory | Entity/personality & relational modeling | Planned |
 | Self Modeling Layer (SML) | Predictive self-state & metacognition | Planned |
@@ -92,6 +104,7 @@ For detailed steps, see [ideas/DMN.md](ideas/DMN.md).
 - The DMN loop is the core recursive process for perception, memory, reasoning, and self-modeling.
 - Operates in cycles: gathers sensory input, parses/dispatches tasks, generates and scores candidate thoughts, binds/expands context, explores and values thought graphs, selects actions, tags with reward, and consolidates memory.
 - Supports mind-wandering, affect-driven savoring, and recursive re-entry; all modulated by neuromodulator and affect states.
+- **Memory Integration**: See [Memory Architecture](./ideas/MemoryArchitecture.md) for details on how the multi-relational knowledge graph enables sophisticated associative retrieval and autobiographical reasoning.
 - Key phases:
   - Input gathering & preprocessing
   - Structured parsing & dispatch
