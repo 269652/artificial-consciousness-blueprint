@@ -32,13 +32,12 @@ graph TD
         R --> A;
     end
 
-    classDef core fill:#cde,stroke:#333,stroke-width:2px;
-    classDef memory fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef control fill:#9cf,stroke:#333,stroke-width:2px;
-    classDef state fill:#fcc,stroke:#333,stroke-width:2px;
+    classDef core fill:#85C1E9,stroke:#3498DB,stroke-width:2px,color:#000;
+    classDef memory fill:#BB8FCE,stroke:#8E44AD,stroke-width:2px,color:#000;
+    classDef control fill:#F7DC6F,stroke:#F1C40F,stroke-width:2px,color:#000;
 
-    class A,B,C,D,E,F,G,H,I,J,M core;
-    class Q,F memory;
+    class A,B,C,D,E,G,H,I,J,M core;
+    class F,Q memory;
     class K,Z,P,R control;
 ```
 
