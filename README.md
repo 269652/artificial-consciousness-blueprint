@@ -12,6 +12,8 @@ This research project implements a **Default Mode Network (DMN) inspired cogniti
 * **🌊 Mind-wandering simulation** through introspective processing modes
 * **🧪 Neurochemical dynamics** modeling dopamine, serotonin, and oxytocin systems
 
+> For a visual overview of the end-to-end cognitive control flow see the **[DMN Algorithm Flowchart](ideas/DMN_Algorithm_Flowchart.md)**.
+
 ## 📊 Current Implementation Status
 
 **Research Phase**: Early-stage proof-of-concept with working subsystems
@@ -146,6 +148,7 @@ This project seeks collaboration with:
 Complete specifications available in `/ideas/` directory:
 - [Technical Specifications](ideas/TechnicalSpecifications.md) - Architecture overview
 - [DMN Algorithm](Algorithm.md) - Core processing loop implementation  
+- **[DMN Algorithm Flowchart](ideas/DMN_Algorithm_Flowchart.md)** - Control Flow Graph (Mermaid) of the recursive loop
 - [Memory Architecture](ideas/MemoryArchitecture.md) - Knowledge graph foundation
 - [Implementation Details](ideas/ImplementationDetails.md) - System constraints and optimization
 - [Plausibility Assessment](PLAUSIBILITY.md) - Scientific feasibility analysis
