@@ -1,0 +1,3 @@
+[submodule "src/artificial-consciousness-ai"]
+	path = src/artificial-consciousness-ai
+	url = https://github.com/269652/artificial-consciousness-ai.git
