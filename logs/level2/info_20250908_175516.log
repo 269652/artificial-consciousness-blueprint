@@ -1,0 +1,10 @@
+2025-09-08 17:55:20,428 | aci.level2.info | INFO | Memory load: episodic_memory
+2025-09-08 17:55:20,453 | aci.level2.info | INFO | Memory load: autobiographical_narrative
+2025-09-08 17:57:24,607 | aci.level2.info | INFO | Memory save: autobiographical_narrative
+2025-09-08 17:57:26,752 | aci.level2.info | INFO | Memory save: autobiographical_narrative
+2025-09-08 17:57:29,473 | aci.level2.info | INFO | Memory save: autobiographical_narrative
+2025-09-08 17:57:31,513 | aci.level2.info | INFO | Memory save: autobiographical_narrative
+2025-09-08 17:57:41,404 | aci.level2.info | INFO | Memory load: memory_graph
+2025-09-08 17:57:41,941 | aci.level2.info | INFO | Simulation step started
+2025-09-08 17:57:41,954 | aci.level2.info | INFO | Starting DMN step
+2025-09-08 17:57:53,046 | aci.level2.info | INFO | Memory create: floating_memory

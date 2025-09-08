@@ -1,0 +1,12 @@
+2025-09-08 17:27:33,125 | aci.level1.info | INFO | Initializing SeedExperience simulation
+2025-09-08 17:29:43,959 | aci.level1.info | INFO | Default Mode Network initialized with persistent memory
+2025-09-08 17:29:44,452 | aci.level1.info | INFO | Loaded existing episodic memories
+2025-09-08 17:29:44,459 | aci.level1.info | INFO | Loaded existing narrative memories
+2025-09-08 17:29:44,469 | aci.level1.info | INFO | Loaded existing knowledge graph
+2025-09-08 17:29:44,489 | aci.level1.info | INFO | SeedExperience initialized
+2025-09-08 17:29:44,496 | aci.level1.info | INFO | Starting simulation
+2025-09-08 17:29:44,503 | aci.level1.info | INFO | World Event: A person resembling Plato sits down on the bench
+2025-09-08 17:29:44,507 | aci.level1.info | INFO | World Event: Conversation started with Plato
+2025-09-08 17:29:44,513 | aci.level1.info | INFO | Thought: What if the bus never comes?
+2025-09-08 17:29:44,530 | aci.level1.info | INFO | Processing input
+2025-09-08 17:29:59,846 | aci.level1.info | INFO | Thought: What if the bus never comes?

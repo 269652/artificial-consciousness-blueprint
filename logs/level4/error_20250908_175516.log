@@ -1,0 +1,1 @@
+2025-09-08 17:57:52,749 | aci.level4.error | ERROR | Failed to save episodic memory: Object of type ndarray is not JSON serializable
